@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="高难狩猎" modversion="1.0.145" corepackage="False" steamworkshopid="2750789266" gameversion="1.11.5.0" expectedhash="4872E97F07F2EA871C8EAF353BB92006">
+<contentpackage name="高难狩猎" modversion="1.0.145" corepackage="False" steamworkshopid="2750789266" gameversion="1.11.5.0">
   <Character file="%ModDir%/Characters/CharybdisSubspecies/CharybdisSubspecies.xml" />
   <Character file="%ModDir%/Characters/Crawler_largeSubspecies/Crawler_largeSubspecies.xml" />
   <Character file="%ModDir%/Characters/Crawlerbroodmother_mSubspecies/Crawlerbroodmother_mSubspecies.xml" />
