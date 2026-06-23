@@ -258,19 +258,19 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="missionheader0.huntinggroundsnoreward11" text="missionmessage0.huntinggroundsnoreward11" />
   </MonsterMission>
-  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward12DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaa" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward12DH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaa" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="调查完毕" text="任务完成，回去汇报吧" />
   </MonsterMission>
-  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward13DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaa" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward13DH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaa" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="调查完毕" text="任务完成，回去汇报吧" />
   </MonsterMission>
-  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward14DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaaa" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward14DH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaaa" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
@@ -377,7 +377,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="任务完成" text="目标已被歼灭" />
   </MonsterMission>
-  <MonsterMission name="猎杀摩螺克群" identifier="killmolochblack10" type="Monster" tags="DifficultHunting" description="一群攻击型极强的摩螺克正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="摩螺克群" maxsonarmarkerdistance="30000" successmessage="摩螺克群已被清除" missionfailure="任务失败" difficulty="4">
+  <MonsterMission name="猎杀摩螺克群" identifier="killmolochblack10DH" type="Monster" tags="DifficultHunting" description="一群攻击型极强的摩螺克正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="摩螺克群" maxsonarmarkerdistance="30000" successmessage="摩螺克群已被清除" missionfailure="任务失败" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="clowns" amount="3" />
     <monster character="MolochblackSubspecies" min="3" max="3" />
@@ -438,7 +438,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
     <message header="目标已击杀" text="藻类爬行者已清除，返回站点领取奖励" />
   </MonsterMission>
-  <MonsterMission name="治疗感染" identifier="killcrawlerhusk12DH" type="Monster" tags="DifficultHuntingCS" description="传言有一只钢铁巨兽[location1]和[location2]之间游荡，使得很多船长拒绝经过，为防止恐惧扩散，联盟希望你去附近海域进行调查。" difficulty="4" commonness="100" reward="10000" sonarlabel="感染源" maxsonarmarkerdistance="10000" successmessage="治疗感染，一次一颗子弹" missionfailure="任务失败">
+  <MonsterMission name="治疗感染" identifier="killcrawlerhusk12DH" type="Monster" tags="DifficultHunting" description="传言有一只钢铁巨兽[location1]和[location2]之间游荡，使得很多船长拒绝经过，为防止恐惧扩散，联盟希望你去附近海域进行调查。" difficulty="4" commonness="100" reward="10000" sonarlabel="感染源" maxsonarmarkerdistance="10000" successmessage="治疗感染，一次一颗子弹" missionfailure="任务失败">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="clowns" amount="3" />
     <monster character="Husk_exosuit01" min="1" max="1" />

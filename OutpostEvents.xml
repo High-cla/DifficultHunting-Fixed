@@ -231,9 +231,9 @@
           <ConversationAction targettag="triggerer_player" dialogtype="Small" eventsprite="map" text="最近一些航道出现了恐怖的传说，你大概会有兴趣">
             <Option text="接受">
               <ConversationAction text="正合我意" dialogtype="Small" targettag="triggerer_player" />
-              <MissionAction missiontag="DifficultHuntingCS" />
-              <MissionAction missiontag="DifficultHuntingCS" />
-              <MissionAction missiontag="DifficultHuntingCS" />
+              <MissionAction missiontag="DifficultHunting" />
+              <MissionAction missiontag="DifficultHunting" />
+              <MissionAction missiontag="DifficultHunting" />
             </Option>
             <Option text="拒绝">
               <ConversationAction text="还是算了吧" dialogtype="Small" targettag="triggerer_player" />

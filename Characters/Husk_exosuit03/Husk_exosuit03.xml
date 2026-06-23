@@ -39,7 +39,7 @@
     <sound File="Content/Characters/Husk_exosuit/HUSKEXO_death1.ogg" State="Die" Range="1000" Volume="1" Tags="" />
     <sound File="Content/Characters/Husk_exosuit/HUSKEXO_death2.ogg" State="Die" Range="1000" Volume="1" Tags="" />
     <inventory Slots="RightHand,LeftHand,Any, Any, Any, Any, Any, Any, Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="2">
-      <Item slot="RightHand,LeftHand" equip="true" Identifier="GuardShieldedpistol3" />
+      <Item slot="RightHand,LeftHand" equip="true" Identifier="GuardShieldedpistol3c" />
       <Item Identifier="huskeggsbasic" />
       <Item amount="2" Identifier="titaniumaluminiumalloy" />
       <Item Identifier="huskstinger" />

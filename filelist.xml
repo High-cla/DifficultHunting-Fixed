@@ -25,7 +25,7 @@
   <Text file="%ModDir%/SimplifiedChinese.xml" />
   <Item file="%ModDir%/alienitems.xml" />
   <Character file="%ModDir%/Characters/Alienbot/Alienbot.xml" />
-  <Character file="%ModDir%/Characters/Alienhuskdh/Alienhuskdh.xml" />
+  <Character file="%ModDir%/Characters/AlienhuskDH/Alienhuskdh.xml" />
   <Character file="%ModDir%/Characters/Mutantcrawlerdh/Mutantcrawlerdh.xml" />
   <Character file="%ModDir%/Characters/CyborgwormSubspecies/CyborgwormSubspecies.xml" />
   <Character file="%ModDir%/Characters/Portalguardianaa/Portalguardianaa.xml" />

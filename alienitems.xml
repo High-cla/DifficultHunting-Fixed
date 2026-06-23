@@ -38,7 +38,7 @@
     </Projectile>
   </Item>
   <Item name="" identifier="chaingunboltDH" category="Weapon" scale="0.3" sonarsize="2" hideinmenus="true">
-    <Sprite texture="%ModDir%/Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="143,310,369,66" depth="0.55" />
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="143,310,369,66" depth="0.55" />
     <Body width="170" height="10" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="100" spread="0" removeonhit="true" damagedoors="true">
@@ -122,7 +122,7 @@
   </Item>
   <Item name="无人机修理弹" identifier="guardianrepairprojectileaa" category="hidden" hideinmenus="true" scale="0.5">
     <Price baseprice="100" sold="false" canbespecial="false" />
-    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="14" density="40" />
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -280,7 +280,7 @@
   </Item>
   <Item name="高贯通轨道炮" identifier="railgun666" category="Misc" scale="0.5" sonarsize="6" hideinmenus="true">
     <Price baseprice="100" sold="false" canbespecial="false" />
-    <Sprite texture="%ModDir%/Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="2,91,215,33" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="2,91,215,33" depth="0.55" origin="0.5,0.5" />
     <Body width="215" height="30" density="30" />
     <Projectile characterusable="false" launchimpulse="300" maxtargetstohit="3" damagedoors="true">
       <Attack structuredamage="100" itemdamage="100" severlimbsprobability="5" penetration="0.5" targetforce="1000">
@@ -322,8 +322,8 @@
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
       <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot2.ogg" type="OnUse" range="3000" />
       <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot3.ogg" type="OnUse" range="3000" />
@@ -358,8 +358,8 @@
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
       <ParticleEmitterCharge particle="ElectricShock" particlespersecond="50" scalemultiplier="0.25,0.25" scalemin="1.0" scalemax="1.0" anglemin="0" anglemax="359" AngleMax="360" CopyEntityDir="False" CopyTargetAngle="True" ColorMultiplier="255,50,50,255" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
@@ -389,8 +389,8 @@
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
       <ParticleEmitterCharge particle="ElectricShock" particlespersecond="50" scalemultiplier="0.25,0.25" scalemin="0.1" scalemax="0.5" anglemin="0" anglemax="359" AngleMax="360" CopyEntityDir="False" CopyTargetAngle="True" ColorMultiplier="255,50,50,255" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
@@ -489,8 +489,8 @@
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" forceplaysounds="true" target="This">
         <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot2.ogg" type="OnUse" range="3000" />
@@ -591,7 +591,7 @@
       <Item identifier="iron" />
       <Item identifier="morbusine" />
     </Deconstruct>
-    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas2.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="186,183,63,16" depth="0.55" origin="0.5,0.5" />
     <Body width="65" height="15" density="100" />
     <Throwable slots="Any,RightHand,LeftHand" holdpos="0,-50" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
@@ -709,8 +709,8 @@
     <Body width="72" height="40" density="25" />
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="75,5" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="29,5" spread="0" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.4" weapondamagemodifier="2">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
       <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
       <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
@@ -971,7 +971,7 @@
       <ParticleEmitter particle="muzzleflashchaingun" particleamount="1" velocitymin="0" velocitymax="0" distancemin="-50" distancemax="-50" />
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" />
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" origin="0.5,0.1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" origin="0.5,0.1" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnUse" range="10000" selectionmode="all" />
       </StatusEffect>
@@ -1043,8 +1043,8 @@
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -1255,8 +1255,8 @@
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" colormultiplier="150,150,255,180" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" colormultiplier="150,150,255,180" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.5" scalemax="2" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" forceplaysounds="true" target="This">
         <Sound file="Content/Sounds/Damage/HitMetal2.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Sounds/Damage/HitMetal3.ogg" type="OnUse" range="3000" />
@@ -1324,8 +1324,8 @@
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
       <ParticleEmitterCharge particle="ElectricShock" particlespersecond="50" scalemultiplier="0.25,0.25" scalemin="1.0" scalemax="1.0" anglemin="0" anglemax="359" AngleMax="360" CopyEntityDir="False" CopyTargetAngle="True" ColorMultiplier="255,50,50,255" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
@@ -1359,8 +1359,8 @@
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
       <ParticleEmitterCharge particle="ElectricShock" particlespersecond="50" scalemultiplier="0.25,0.25" scalemin="1.0" scalemax="2.0" anglemin="0" anglemax="359" AngleMax="360" CopyEntityDir="False" CopyTargetAngle="True" ColorMultiplier="255,50,50,255" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
@@ -1677,16 +1677,16 @@
     <Sonar range="6000.0" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="true" allowuioverlap="true">
       <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
       <GuiFrame relativesize="0.3,0.3" anchor="TopRight" relativeoffset="-0.038,-0.088" />
-      <PingCircle texture="%ModDir%/Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
-      <DirectionalPingCircle texture="%ModDir%/Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
-      <ScreenOverlay texture="%ModDir%/Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
-      <ScreenBackground texture="%ModDir%/Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
-      <DirectionalPingBackground texture="%ModDir%/Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
-      <DirectionalPingButton index="0" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="1" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="2" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-      <Blip texture="%ModDir%/Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
-      <LineSprite texture="%ModDir%/Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+      <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+      <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+      <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+      <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+      <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+      <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+      <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+      <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
       <icon identifier="outpost" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
       <icon identifier="submarine" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
       <icon identifier="shuttle" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
@@ -1812,7 +1812,7 @@
       <ParticleEmitter particle="muzzleflashchaingun" particleamount="1" velocitymin="0" velocitymax="0" distancemin="-50" distancemax="-50" />
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" />
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" origin="0.5,0.1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" origin="0.5,0.1" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnUse" range="10000" selectionmode="all" />
       </StatusEffect>
@@ -1878,8 +1878,8 @@
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -1936,8 +1936,8 @@
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" colormultiplier="150,150,255,180" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" colormultiplier="150,150,255,180" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.5" scalemax="2" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" forceplaysounds="true" target="This">
         <Sound file="Content/Sounds/Damage/HitMetal2.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Sounds/Damage/HitMetal3.ogg" type="OnUse" range="3000" />
@@ -2008,8 +2008,8 @@
       <ParticleEmitter particle="GlowDot" scalemin="4.0" scalemax="4.0" particleamount="20" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" colormultiplier="10,235,195,255" />
       <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
       <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
@@ -2059,13 +2059,13 @@
     <SkillRequirementHint identifier="weapons" level="70" />
   </Item>
   <Item name="" identifier="revolverleft" nonplayerteaminteractable="True" hideinmenus="true" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,gunsmith,mountableweapon,provocative" Scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
     <Body width="72" height="40" density="25" />
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,0" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="29,11" spread="0" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.6">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
       <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
       <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
@@ -2100,13 +2100,13 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <Item name="" identifier="revolverright" nonplayerteaminteractable="True" hideinmenus="true" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,gunsmith,mountableweapon,provocative" Scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
     <Body width="72" height="40" density="25" />
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,10" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="29,11" spread="0" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.9">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
       <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
       <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
@@ -2149,8 +2149,8 @@
     <Body width="146" height="88" density="50" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="120,-30" aimpos="120,-30" handle1="-27,0" handle2="25,-0" holdangle="-27" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="80,-20" spread="0" drawhudwhenequipped="true" reload="4" crosshairscale="0.2" combatPriority="80" suitableprojectiles="railgun666" weapondamagemodifier="0.9">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2168,8 +2168,8 @@
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,1.5" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2216,8 +2216,8 @@
     <Body width="146" height="88" density="50" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="120,-30" aimpos="120,-30" handle1="-27,0" handle2="25,-0" holdangle="-27" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="80,-20" spread="0" drawhudwhenequipped="true" reload="4" crosshairscale="0.2" combatPriority="80" suitableprojectiles="gravityshell" weapondamagemodifier="0.9">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2235,8 +2235,8 @@
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,1.5" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2283,8 +2283,8 @@
     <Body width="146" height="88" density="50" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="120,-30" aimpos="120,-30" handle1="-27,0" handle2="25,-0" holdangle="-27" msg="ItemMsgPickUpSelect" />
     <RangedWeapon barrelpos="80,-20" spread="0" drawhudwhenequipped="true" reload="4" crosshairscale="0.2" combatPriority="80" suitableprojectiles="railgunharpoon" weapondamagemodifier="0.9">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2302,8 +2302,8 @@
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,1.5" />
       <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <StatusEffect type="OnUse" target="This" disabledeltatime="true" forceplaysounds="true">
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
         <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
@@ -2438,16 +2438,16 @@
     <Sonar range="6000.0" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="true" allowuioverlap="true">
       <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
       <GuiFrame relativesize="0.3,0.3" anchor="TopRight" relativeoffset="-0.038,-0.088" />
-      <PingCircle texture="%ModDir%/Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
-      <DirectionalPingCircle texture="%ModDir%/Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
-      <ScreenOverlay texture="%ModDir%/Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
-      <ScreenBackground texture="%ModDir%/Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
-      <DirectionalPingBackground texture="%ModDir%/Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
-      <DirectionalPingButton index="0" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="1" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="2" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-      <Blip texture="%ModDir%/Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
-      <LineSprite texture="%ModDir%/Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+      <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+      <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+      <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+      <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+      <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+      <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+      <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+      <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
       <icon identifier="outpost" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
       <icon identifier="submarine" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
       <icon identifier="shuttle" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
@@ -2580,16 +2580,16 @@
     <Sonar range="6000.0" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="true" allowuioverlap="true">
       <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
       <GuiFrame relativesize="0.3,0.3" anchor="TopRight" relativeoffset="-0.038,-0.088" />
-      <PingCircle texture="%ModDir%/Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
-      <DirectionalPingCircle texture="%ModDir%/Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
-      <ScreenOverlay texture="%ModDir%/Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
-      <ScreenBackground texture="%ModDir%/Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
-      <DirectionalPingBackground texture="%ModDir%/Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
-      <DirectionalPingButton index="0" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="1" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-      <DirectionalPingButton index="2" texture="%ModDir%/Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-      <Blip texture="%ModDir%/Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
-      <LineSprite texture="%ModDir%/Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+      <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+      <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+      <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+      <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+      <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+      <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+      <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+      <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+      <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
       <icon identifier="outpost" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
       <icon identifier="submarine" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
       <icon identifier="shuttle" texture="%ModDir%/Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
@@ -2643,14 +2643,14 @@
     </ItemContainer>
   </Item>
   <Item name="" identifier="anomalyDH" texturescale="1.0,1.0" scale="0.5" category="Alien" spritecolor="255,255,255,100">
-    <Sprite texture="%ModDir%/Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.4" origin="0.5,0.5" offset="0,0" />
+    <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.4" origin="0.5,0.5" offset="0,0" />
     <Body width="250" height="250" density="0" />
     <Pickable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="26,28" holdangle="0" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect" />
-    <DecorativeSprite texture="%ModDir%/Content/Items/Alien/AlienRuins_Items.png" sourcerect="21,1367,395,395" depth="0.75" origin="0.5,0.5" offset="0,0" scale="0.5" rotationspeed="300" />
-    <DecorativeSprite texture="%ModDir%/Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" offset="0,0" scale="0.5" rotationspeed="-350" />
+    <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="21,1367,395,395" depth="0.75" origin="0.5,0.5" offset="0,0" scale="0.5" rotationspeed="300" />
+    <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" offset="0,0" scale="0.5" rotationspeed="-350" />
     <AiTarget sonardisruption="1" sightrange="500" soundrange="500" static="true" sonarlabel="entityname.anomaly" />
     <LightComponent range="500.0" lightcolor="255,200,15,255" IsOn="true" castshadows="false" allowingameediting="false" flicker="0.1" flickerspeed="5">
-      <DecorativeSprite texture="%ModDir%/Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" />
+      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" />
       <StatusEffect type="Always" target="This">
         <Sound file="Content/Items/Alien/AlienPump.ogg" range="20000" position="0,0" />
         <ParticleEmitter particle="anomaly" particlespersecond="5" position="0,0" scalemin="0.1" scalemax="0.2" anglemin="0" anglemax="306" velocitymin="0" velocitymax="5" />
