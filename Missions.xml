@@ -183,8 +183,8 @@
       <Item identifier="tigerthresheregg" />
       <Item identifier="tigerthresheregg" />
     </Items>
-    <Monster character="Husk_prowler" min="10" max="12" />
-    <Monster character="Husk_exosuit" min="5" max="5" multiplayeronly="true" />
+    <Monster character="Husk_prowler01" min="10" max="12" />
+    <Monster character="Husk_exosuit01" min="5" max="5" multiplayeronly="true" />
     <Reputation identifier="location" amount="5" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
@@ -226,8 +226,8 @@
       <Item identifier="tigerthresheregg" />
       <Item identifier="tigerthresheregg" />
     </Items>
-    <Monster character="Husk_prowler" min="10" max="12" />
-    <Monster character="Husk_chimera" min="5" max="5" multiplayeronly="true" />
+    <Monster character="Husk_prowler01" min="10" max="12" />
+    <Monster character="Husk_chimeraex" min="5" max="5" multiplayeronly="true" />
     <Reputation identifier="location" amount="5" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
@@ -252,7 +252,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="missionheader0.huntinggroundsnoreward10" text="missionmessage0.huntinggroundsnoreward10" />
   </MonsterMission>
-  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward11DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" monsterfile="doomwormSubspecies" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward11DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" monsterfile="DoomwormSubspecies" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="clowns" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
@@ -293,7 +293,7 @@
   <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward15DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="6000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="clowns" amount="3" />
-    <monster character="doomwormSubspecies" min="2" max="2" />
+    <monster character="DoomwormSubspecies" min="2" max="2" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="狩猎结束" text="你已超越深渊" />
   </MonsterMission>
@@ -339,7 +339,7 @@
     <monster character="EndwormSubspecies" min="1" max="1" />
     <monster character="LatcherSubspecies" min="1" max="1" />
     <monster character="CharybdisSubspecies" min="1" max="1" />
-    <monster character="doomwormSubspecies" min="1" max="1" />
+    <monster character="DoomwormSubspecies" min="1" max="1" />
     <monster character="CyborgwormSubspecies" min="1" max="1" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="狂宴结束" text="你已击退深渊" />
@@ -484,9 +484,9 @@
     <LocationType identifier="Abandoned" />
     <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
     <Characters>
-      <Character identifier="Husk_prowler" min="2" max="4" />
-      <Character identifier="Husk_chimera" min="2" max="4" />
-      <Character identifier="Husk_exosuit" min="2" max="4" />
+      <Character identifier="Husk_prowler01" min="2" max="4" />
+      <Character identifier="Husk_chimeraex" min="2" max="4" />
+      <Character identifier="Husk_exosuit01" min="2" max="4" />
       <Character identifier="HuskSubspecies" min="6" max="10" />
     </Characters>
     <Items>

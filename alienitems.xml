@@ -182,7 +182,7 @@
         <Affliction identifier="stun" strength="1" />
       </Attack>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="25" disabledeltatime="true">
-        <SpawnCharacter speciesname="Husk_chimera" count="1" spread="1" />
+        <SpawnCharacter speciesname="Husk_chimeraex" count="1" spread="1" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="30" disabledeltatime="true">
         <Remove />
@@ -218,7 +218,7 @@
         <Affliction identifier="stun" strength="1" />
       </Attack>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="25" disabledeltatime="true">
-        <SpawnCharacter speciesname="Husk_exosuit" count="1" spread="1" />
+        <SpawnCharacter speciesname="Husk_exosuit01" count="1" spread="1" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="30" disabledeltatime="true">
         <Remove />
@@ -254,7 +254,7 @@
         <Affliction identifier="stun" strength="1" />
       </Attack>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="15" disabledeltatime="true">
-        <SpawnCharacter speciesname="Husk_prowler" count="1" spread="1" />
+        <SpawnCharacter speciesname="Husk_prowler01" count="1" spread="1" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="30" disabledeltatime="true">
         <Remove />
@@ -344,7 +344,7 @@
         <SpawnItem identifiers="SmalllaserDS2" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="500" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="500" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="10" Condition="100" target="This" tags=" " setvalue="true" />
@@ -1382,7 +1382,7 @@
         <Affliction identifier="stun" strength="0.25" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="10" Condition="100" target="This" setvalue="true" />
@@ -1829,7 +1829,7 @@
         <SpawnItem identifiers="liveammunitionDS" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="5" Condition="100" target="This" setvalue="true" />
@@ -1890,7 +1890,7 @@
         <SpawnItem identifiers="SmallliveammunitionDS" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="5" Condition="100" target="This" setvalue="true" />
@@ -1963,7 +1963,7 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="5" Condition="100" target="This" setvalue="true" />
@@ -2024,7 +2024,7 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="5" Condition="100" target="This" setvalue="true" />
@@ -2057,52 +2057,6 @@
     <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,235,292,118" origin="0.5,0.5" />
     <Quality Qualitylevel="3" />
     <SkillRequirementHint identifier="weapons" level="70" />
-  </Item>
-  <Item name="" identifier="shotgunDH" category="Weapon" nonplayerteaminteractable="True" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,provocative" Scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="704,830,64,64" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="0,65,185,54" depth="0.55" origin="0.5,0.25" />
-    <Body width="180" height="30" density="25" />
-    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-25,-16" handle2="26,0" holdangle="-40" msg="ItemMsgPickUpSelect" />
-    <RangedWeapon barrelpos="80,5" spread="0.1" combatPriority="80" reload="1" drawhudwhenequipped="true" crosshairscale="0.2">
-      <Crosshair texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="%ModDir%/Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
-      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
-      <Sound file="Content/Items/Weapons/ShotgunShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
-      <Sound file="Content/Items/Weapons/ShotgunShot2.ogg" type="OnUse" range="3000" />
-      <Sound file="Content/Items/Weapons/ShotgunShot3.ogg" type="OnUse" range="3000" />
-      <Sound file="Content/Items/Weapons/ShotgunShot4.ogg" type="OnUse" range="3000" />
-      <StatusEffect type="OnUse" target="This">
-        <Explosion range="150.0" force="2.5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This" delay="1.0">
-        <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="500" selectionmode="Random" />
-        <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="500" />
-        <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="500" />
-      </StatusEffect>
-      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
-        <SpawnItem identifier="shotgunshell" spawnposition="ThisInventory" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
-        <SpawnItem identifier="shotgunshell" spawnposition="ThisInventory" />
-      </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This">
-        <Remove />
-      </StatusEffect>
-      <!-- Cocking sound, delayed by 1.0 seconds. -->
-    </RangedWeapon>
-    <ItemContainer capacity="1" maxstacksize="6" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
-      <Containable items="shotgunshell" hide="true" />
-      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
-      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
-      <SubContainer capacity="1" maxstacksize="1">
-        <Containable items="flashlight" hide="false" itempos="26,-3" setactive="true" />
-      </SubContainer>
-    </ItemContainer>
-    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
-    <Quality>
-      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
-    </Quality>
-    <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <Item name="" identifier="revolverleft" nonplayerteaminteractable="True" hideinmenus="true" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,gunsmith,mountableweapon,provocative" Scale="0.5" impactsoundtag="impact_metal_light">
     <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
@@ -2226,7 +2180,7 @@
         <SpawnItem identifiers="SmallliveammunitionDS" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="4" Condition="100" target="This" setvalue="true" />
@@ -2293,7 +2247,7 @@
         <SpawnItem identifiers="SmallliveammunitionDS" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="4" Condition="100" target="This" setvalue="true" />
@@ -2360,7 +2314,7 @@
         <SpawnItem identifiers="SmallliveammunitionDS" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <Sound file="%ModDir%/Content/Items/Weapons/过热音.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="%ModDir%/Content/Items/Weapons/Overheating.ogg" type="OnUse" range="1000" selectionmode="Random" />
         <ParticleEmitter particle="swirlysmoke" particleamount="20" velocitymin="0" velocitymax="0" scalemin="3" scalemax="5" distancemin="-100" distancemax="50" />
       </StatusEffect>
       <StatusEffect type="OnBroken" delay="4" Condition="100" target="This" setvalue="true" />

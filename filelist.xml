@@ -18,8 +18,8 @@
   <Character file="%ModDir%/Characters/CarrierEX2/CarrierEX2.xml" />
   <Character file="%ModDir%/Characters/CarrierEX3/CarrierEX3.xml" />
   <Character file="%ModDir%/Characters/Doomslasher/Doomslasher.xml" />
-  <Character file="%ModDir%/Characters/GuardianrepairbotSubspecies.xml" />
-  <Character file="%ModDir%/Characters/PortalguardianSubspecies.xml" />
+  <Character file="%ModDir%/Characters/GuardianrepairbotSubspecies/GuardianrepairbotSubspecies.xml" />
+  <Character file="%ModDir%/Characters/PortalguardianSubspecies/PortalguardianSubspecies.xml" />
   <Missions file="%ModDir%/Missions.xml" />
   <RandomEvents file="%ModDir%/OutpostEvents.xml" />
   <Text file="%ModDir%/SimplifiedChinese.xml" />
@@ -37,7 +37,7 @@
   <Character file="%ModDir%/Characters/Humandh5/Humandh5.xml" />
   <Other file="%ModDir%/Content/Items/Weapons/Goldenrevolverround.ogg" />
   <Other file="%ModDir%/Content/Items/Weapons/Goldenrevolver.ogg" />
-  <Other file="%ModDir%/Content/Items/Weapons/过热音.ogg" />
+  <Other file="%ModDir%/Content/Items/Weapons/Overheating.ogg" />
   <Character file="%ModDir%/Characters/Crawleraa/Crawleraa.xml" />
   <Character file="%ModDir%/Characters/Hammerheadaa/Hammerheadaa.xml" />
   <Character file="%ModDir%/Characters/Mudraptoraa/Mudraptoraa.xml" />
