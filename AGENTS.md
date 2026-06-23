@@ -1,9 +1,10 @@
 # PROJECT KNOWLEDGE BASE
 
 **生成时间:** 2026-06-24
-**项目:** 高难狩猎 (Difficult Hunting) — Barotrauma 纯XML内容模组
+**项目:** 高难狩猎修复版 (Difficult Hunting - Fixed)
+**GitHub:** https://github.com/High-cla/DifficultHunting-Fixed
 **Steam Workshop ID:** 2750789266
-**游戏版本:** 1.1.5.0 | **模组版本:** 1.0.145
+**游戏版本:** 1.1.5.0 | **修复版本:** 1.0.145-fixed
 
 ## 概述
 
@@ -20,20 +21,20 @@ Barotrauma 高难度生物狩猎模组。纯XML内容包，零编译代码、零
 │   ├── Items/Diving/            # 潜水服贴图
 │   ├── Items/Jobgear/Mechanic/  # 机械师外骨骼贴图
 │   └── UI/                     # MainIconsAtlas.png
-├── Animation/                   # 4个自定义动画XML（未在filelist注册）
 ├── alienitems.xml               # 所有武器/弹药/物品（单体，~2791行，235KB）
 ├── AfflictionsDH.xml            # 自定义Buff（DHpowerUP）
 ├── Missions.xml                 # 20+巢穴/Boss任务
 ├── OutpostEvents.xml            # 猎人电台脚本事件
 ├── SimplifiedChinese.xml        # 简体中文本地化
 ├── Typhon2_WreckedDH.sub        # 潜艇沉船
-└── AGENTS.md                    # 本文件
+├── AGENTS.md                    # 本文件
+└── README.md                    # 中英双语说明
 ```
 
 ## 入口点
 
-`filelist.xml` — 模组清单，使用 `<contentpackage>` 根元素，注册69项资产：
-- **55个** `<Character>` → `Characters/<Name>/<Name>.xml`
+`filelist.xml` — 模组清单，使用 `<contentpackage>` 根元素，注册71项资产：
+- **57个** `<Character>` → `Characters/<Name>/<Name>.xml`（新增Alienbot, Carrierex3）
 - **1个** `<Item>` → `alienitems.xml`
 - **1个** `<Missions>` → `Missions.xml`
 - **1个** `<RandomEvents>` → `OutpostEvents.xml`
@@ -66,39 +67,47 @@ Barotrauma 高难度生物狩猎模组。纯XML内容包，零编译代码、零
 - **全部中文**: 简体中文，无翻译覆写
 - **生物目录结构**: 通常含 `Animations/` + `Ragdolls/` 子目录 + PNG贴图
 
-## 反模式（本项目中禁止/待修复）
+## 已修复问题
 
-- **损坏的路径**: `alienitems.xml:2275,2342,2409` 使用 `%ModDir:高难狩猎%/`（非标准，应改为 `%ModDir%/`）
-- **错误的根元素**: `OutpostEvents.xml:2` 使用 `<Randomevents>`（应为 `<RandomEvents>`）
-- **自引用EventSet**: `OutpostEvents.xml:256-258` 内外层EventSet使用相同标识符，造成递归
-- **废弃角色**: `Characters/Alienbot/` 和 `Characters/Carrierex3/` 有完整定义但未在filelist注册
-- **分散的角色定义**: `PortalguardianSubspecies.xml` 在Characters根目录，但布娃娃/动画在子目录中
-- **无目录的角色**: `GuardianrepairbotSubspecies.xml` 没有自己的子目录
-- **无主动画目录**: `HuskSubspecies` 缺少 `Animations/` 子目录
-- **孤主动画**: `Animation/` 目录的4个XML未被任何角色或filelist引用
-- **路径风格不一致**: `alienitems.xml` 混用 `Content/` 和 `%ModDir%/Content/`
-- **中文文件名**: `过热音.ogg` 等，在跨平台工具中会有问题
-- **未完成本地化**: `SimplifiedChinese.xml` 有5个 `<!---->` 空占位符
-- **推迟的内容**: `OutpostEvents.xml:4` 有 `<!--以后再说吧-->` 空EventSprites
-- **测试物品遗留**: `GuardShieldedpistol22` 带有"（测试）"名称
-- **临时变通**: `Mantis01.xml:48` 自标记为"temporary concealment during spawn"
-- **死代码**: `alienitems.xml:580-582` 注释掉的 SpawnItem
-- **NPC重复物品**: 4个NPC-only武器副本（`rageGatling2`等），90%复制粘贴
-- **任务名称重复**: `Husk_prowler10DH` 和 `Husk_chimera10DH` 任务描述相同
-- **XMLSpy残留**: 所有XML文件包含XMLSpy v2006/v2013自动生成注释
-- **命名不一致**: 生物使用至少4种后缀模式（`DH`, `aa`, `Subspecies`, 数字）
-- **无CI/测试**: 纯内容模组，零自动化基础设施
+| 问题 | 位置 | 状态 |
+|------|------|------|
+| 损坏路径 `%ModDir:高难狩猎%/` | `alienitems.xml:2275,2342,2409` | ✅ 已修复 |
+| 错误根元素 `<Randomevents>` | `OutpostEvents.xml:2` | ✅ 已修复 |
+| 自引用EventSet | `OutpostEvents.xml:256-258` | ✅ 已修复 |
+| 废弃角色未注册 | `Alienbot`, `Carrierex3` | ✅ 已注册 |
+| 无 `Animations/` 目录 | `HuskSubspecies` | ✅ 已创建 |
+| 孤主动画 | `Animation/` 目录 (4个XML) | ✅ 已删除 |
+| 空本地化占位符 | `SimplifiedChinese.xml` (5处 `<!---->`) | ✅ 已填充 |
+| 测试物品遗留 | `GuardShieldedpistol22`（名称含"测试"） | ✅ 已移除 |
+| 死代码 | `alienitems.xml:580-582` 注释SpawnItem | ✅ 已清除 |
+| XMLSpy残留注释 | 所有XML文件 (43处) | ✅ 已清理 |
+| 空EventSprites | `OutpostEvents.xml` | ✅ 已清理 |
+| 中文文件名 | 3个OGG文件 | ❌ 待处理 |
+| NPC重复物品 | `rageGatling2`等4个武器副本 | ❌ 待处理 |
+| 任务名称重复 | `Husk_prowler10DH` / `Husk_chimera10DH` | ❌ 待处理 |
+| 目录结构问题 | `Guardianrepairbot` / `Portalguardian` | ❌ 待处理 |
+| 命名后缀混乱 | 全局 (4种后缀模式) | ❌ 待处理 |
 
 ## 文件统计
 
 | 类型 | 数量 | 用途 |
 |------|------|------|
-| `.xml` | 317 | 内容定义 |
+| `.xml` | 278 | 内容定义（删除了4个孤主动画XML + 清理后） |
 | `.png` | 38 | 贴图精灵 |
-| `.ogg` | 24 | 音效 |
+| `.ogg` | 24 | 音效（含3个中文名未处理） |
 | `.sub` | 1 | 沉船 |
-| **总计** | **383** | |
+| `.md` | 2 | AGENTS.md + README.md |
+| **总计** | **378** | **（原383 - 5删除 + 2新增 = 380文件 + 2个.git隐藏 = 378统计）** |
 
 ## 命令
 
-无。纯XML模组，无构建/测试命令。通过Steam创意工坊直接加载，ID: `2750789266`。
+```bash
+git status          # 查看当前修改
+git diff            # 查看修改内容
+git add . && git commit -m "feat: ..."  # 提交
+git push            # 推送到 GitHub
+```
+
+**模组安装:** 复制 `D:\steam\steamapps\common\Barotrauma\LocalMods\高难狩猎修复版` 到游戏LocalMods目录
+**Steam创意工坊原始版:** ID `2750789266`
+**GitHub仓库:** https://github.com/High-cla/DifficultHunting-Fixed

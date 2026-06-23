@@ -1,11 +1,11 @@
 # Characters — 生物亚种定义
 
 **生成时间:** 2026-06-24
-**文件数:** ~351 XML + 38 PNG | **注册:** 55种在 `filelist.xml`
+**文件数:** ~351 XML + 38 PNG | **修复版注册:** 57种在 `filelist.xml`（新增 Alienbot, Carrierex3）
 
 ## 概述
 
-模组核心内容目录。~60种生物亚种，55种已注册，~5种废弃/未引用。纯XML定义（hp/AI/肢体/物品栏/战利品/动画/布娃娃物理）。
+模组核心内容目录。~60种生物亚种，57种已注册（修复版新增 Alienbot, Carrierex3）。纯XML定义（hp/AI/肢体/物品栏/战利品/动画/布娃娃物理）。
 
 ## 标准目录结构
 
@@ -36,7 +36,7 @@ Characters/<Name>/
 
 ## Anti-Patterns（仅限本目录）
 
-- **缺失Animations目录**: `HuskSubspecies` 有 `Ragdolls/` 但无 `Animations/`
+- **缺失Animations目录**: `HuskSubspecies` — 目录已创建 ✅
 - **根目录角色文件**: `GuardianrepairbotSubspecies.xml` 和 `PortalguardianSubspecies.xml` 无自己的子目录，文件散落于 `Characters/` 根
-- **废弃但完整**: `Alienbot/` 和 `Carrierex3/` 完整定义（xml/png/animations/ragdolls全齐），但未注册 `filelist.xml`
+- **废弃但完整**: `Alienbot/` 和 `Carrierex3/` — 已注册到 filelist.xml ✅
 - **命名后缀混乱**: 至少4种后缀模式混用 — `DH`（crawlernest10DH）、`aa`（shellexplosionaa）、`Subspecies`（GuardianrepairbotSubspecies）、纯数字/无后缀
