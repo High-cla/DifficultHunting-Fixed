@@ -264,13 +264,13 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="调查完毕" text="任务完成，回去汇报吧" />
   </MonsterMission>
-  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward13DH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaa" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward13DHa" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaa" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
     <message header="调查完毕" text="任务完成，回去汇报吧" />
   </MonsterMission>
-  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward14DH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaaa" spawntype="Abyss" difficulty="4">
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward14DHa" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaaa" spawntype="Abyss" difficulty="4">
     <Reputation identifier="location" amount="2" />
     <Reputation identifier="huskcult" amount="3" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
