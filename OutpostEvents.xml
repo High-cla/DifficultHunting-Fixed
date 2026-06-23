@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RandomEvents>
+  <EventSprites />
+  <EventPrefabs>
+    <ScriptedEvent identifier="DifficultHunting" commonness="200">
+      <TagAction criteria="itemidentifier:navterminal" tag="navterminal" submarinetype="player" />
+      <TagAction criteria="player" tag="player" />
+      <Label name="waitforinput" />
+      <TriggerAction target1tag="navterminal" target2tag="player" applytotarget1="selectednavterminal" applytotarget2="triggerer_player" radius="200" waitforinteraction="true" />
+      <ConversationAction targettag="triggerer_player" text="嘶嘶......能听到吗，这里是猎人电台，各位船长们可以从我们这里接取一些特殊任务!" eventsprite="Captain">
+        <Option text="询问特别委托">
+          <ConversationAction targettag="triggerer_player" dialogtype="Small" eventsprite="map" text="特别委托的风险会高一些，当然，报酬也是">
+            <Option text="接受">
+              <ConversationAction text="正合我意" dialogtype="Small" targettag="triggerer_player" />
+              <MissionAction missiontag="DifficultHunting" />
+              <MissionAction missiontag="DifficultHunting" />
+              <MissionAction missiontag="DifficultHunting" />
+            </Option>
+            <Option text="拒绝">
+              <ConversationAction text="还是算了吧" dialogtype="Small" targettag="triggerer_player" />
+              <GoTo name="waitforinput" />
+            </Option>
+          </ConversationAction>
+        </Option>
+        <Option text="询问站点事件">
+          <ConversationAction targettag="triggerer_player" text="站点出现了入侵者，希望你可以去进行处理，当然，战利品都归你" eventsprite="Captain">
+            <Option text="叛军突袭" endconversation="true">
+              <ConversationAction targettag="triggerer_player" text="敌人5秒后来袭" endconversation="true">
+                <Option text="准备战斗" endconversation="true">
+                  <WaitAction time="5" />
+                  <SpawnAction speciesname="humandh" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="humandh2" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="humandh3" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="humandh4" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="humandh5" spawnlocation="Outpost" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="失控机械" endconversation="true">
+              <ConversationAction targettag="triggerer_player" text="敌人5秒后来袭" endconversation="true">
+                <Option text="准备战斗" endconversation="true">
+                  <WaitAction time="5" />
+                  <SpawnAction speciesname="Ed209" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="Ed209a" spawnlocation="Outpost" />
+                  <SpawnAction speciesname="Ed209b" spawnlocation="Outpost" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="换一个任务" endconversation="true">
+              <GoTo name="waitforinput" />
+            </Option>
+          </ConversationAction>
+        </Option>
+        <Option text="进行物品交易">
+          <ConversationAction targettag="triggerer_player" text="带给我有趣的东西，我会给你报酬" eventsprite="Captain">
+            <Option text="想要交易人物强化道具">
+              <ConversationAction text="强化自身也是很明智的选择" targettag="triggerer_player">
+                <Option text="给予锤头鲨的肋排（1000经验）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="hammerheadribs" amount="1">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="hammerheadribs" amount="1" />
+                      <ConversationAction targettag="triggerer_player" text="锤头鲨的肋排可是上好的食材" />
+                      <StatusEffectAction targettag="triggerer_player">
+                        <StatusEffect>
+                          <GiveExperience amount="3000" />
+                        </StatusEffect>
+                      </StatusEffectAction>
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予摩螺克的壳（内分泌促进剂）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="molochbone" amount="1">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="molochbone" amount="1" />
+                      <ConversationAction targettag="triggerer_player" text="虽然摩螺克数量很多，但是壳的产量却很低，这是为什么呢..." />
+                      <SpawnAction itemidentifier="endocrinebooster" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予蠕虫的壳（内分泌促进剂）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="endwormshell" amount="1">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="endwormshell" amount="1" />
+                      <ConversationAction targettag="triggerer_player" text="居然能拿到这种宝贝" />
+                      <SpawnAction itemidentifier="endocrinebooster" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予异星遗物（高级基因拼接器）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="skyholderartifact,thermalartifact,faradayartifact,nasonovartifact,psychosisartifact" amount="1">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="skyholderartifact,thermalartifact,faradayartifact,nasonovartifact,psychosisartifact" amount="1" />
+                      <ConversationAction targettag="triggerer_player" text="异星遗物的收藏价值也很高,当然,前提是妥善保管" />
+                      <SpawnAction itemidentifier="advancedgenesplicer" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予5个外星生物的蛋（5个未鉴定基因）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="smallmudraptoregg,mediummudraptoregg,largemudraptoregg,tigerthresheregg,crawleregg" amount="5">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="smallmudraptoregg,mediummudraptoregg,largemudraptoregg,tigerthresheregg,crawleregg" amount="5" />
+                      <ConversationAction targettag="triggerer_player" text="从蛋开始研究外星生物自然是最好的" />
+                      <SpawnAction itemidentifier="geneticmaterial_unresearched" amount="5" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="只是看看">
+                  <ConversationAction text="找到了记得来找我" targettag="triggerer_player" />
+                  <GoTo name="waitforinput" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="想要交易特殊武器">
+              <ConversationAction text="武器装备也是生存的关键道具" targettag="triggerer_player">
+                <Option text="给予12个异星电路（“守卫”带盾手枪）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="aliencircuitry" amount="12">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="aliencircuitry" amount="12" />
+                      <ConversationAction targettag="triggerer_player" text="异星电路可是很有研究价值的" />
+                      <SpawnAction itemidentifier="GuardShieldedpistol" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予12个异星电路（“静谧”激光步枪）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="aliencircuitry" amount="12">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="aliencircuitry" amount="12" />
+                      <ConversationAction targettag="triggerer_player" text="异星电路可是很有研究价值的" />
+                      <SpawnAction itemidentifier="stillLaserRifle" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予24个异星饰品（“暴怒”加特林）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="alientrinket1,alientrinket2,alientrinket3" amount="24">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="alientrinket1,alientrinket2,alientrinket3" amount="24" />
+                      <ConversationAction targettag="triggerer_player" text="异星饰品的收藏价值相当不错" />
+                      <SpawnAction itemidentifier="rageGatling" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="给予24个异星饰品（“毁灭”单兵激光炮）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="alientrinket1,alientrinket2,alientrinket3" amount="24">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="alientrinket1,alientrinket2,alientrinket3" amount="24" />
+                      <ConversationAction targettag="triggerer_player" text="异星饰品的收藏价值相当不错" />
+                      <SpawnAction itemidentifier="destructionIndividualLaserCannon" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="只是看看">
+                  <ConversationAction text="找到了记得来找我" targettag="triggerer_player" />
+                  <GoTo name="waitforinput" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="想要交易动力甲">
+              <ConversationAction text="动力甲可是男人的浪漫" targettag="triggerer_player">
+                <Option text="给予8个异星电池（堡垒级空间动力甲）">
+                  <CheckItemAction targettag="triggerer_player" itemidentifiers="alienpowercell" amount="8">
+                    <Success>
+                      <RemoveItemAction targettag="triggerer_player" itemidentifier="alienpowercell" amount="8" />
+                      <ConversationAction targettag="triggerer_player" text="这场交易,我们都会满意的" />
+                      <SpawnAction itemidentifier="spacepowerarmourEX" targetinventory="triggerer_player" />
+                      <GoTo name="waitforinput" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="不要浪费时间" />
+                      <GoTo name="waitforinput" />
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="只是看看">
+                  <ConversationAction text="找到了记得来找我" targettag="triggerer_player" />
+                  <GoTo name="waitforinput" />
+                </Option>
+              </ConversationAction>
+            </Option>
+            <Option text="只是看看">
+              <ConversationAction text="找到了记得来找我" targettag="triggerer_player" />
+              <GoTo name="waitforinput" />
+            </Option>
+          </ConversationAction>
+        </Option>
+        <Option text="询问站点流言">
+          <ConversationAction targettag="triggerer_player" dialogtype="Small" eventsprite="map" text="最近一些航道出现了恐怖的传说，你大概会有兴趣">
+            <Option text="接受">
+              <ConversationAction text="正合我意" dialogtype="Small" targettag="triggerer_player" />
+              <MissionAction missiontag="DifficultHuntingCS" />
+              <MissionAction missiontag="DifficultHuntingCS" />
+              <MissionAction missiontag="DifficultHuntingCS" />
+            </Option>
+            <Option text="拒绝">
+              <ConversationAction text="还是算了吧" dialogtype="Small" targettag="triggerer_player" />
+              <GoTo name="waitforinput" />
+            </Option>
+          </ConversationAction>
+        </Option>
+        <Option text="等一会再说">
+          <ConversationAction text="现在不是时候" dialogtype="Small" targettag="triggerer_player" />
+          <GoTo name="waitforinput" />
+        </Option>
+        <Option text="不需要">
+          <ConversationAction text="关掉电台" dialogtype="Small" targettag="triggerer_player" />
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+  </EventPrefabs>
+  <EventSet identifier="outposteventsDH" leveltype="outpost" locationtype="lair,lairmudraptor,lairthresher,huskgroundsde,militaryforces,construction,outpost,settlement,colony,city,camp,base,military,blockade,survey,mine,study,research,clinic,hospital,hydroponics,factory,shipyard,huskchurch,sinkingcircus,PirateOutpost,biosphere,nourishment,excavation,lab,surgery,fusion,XCOM_outpost,ADVENT_city,tsm_military,tsm_city,tsm_mine," allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" SelectAlways="true" additive="true" chooserandom="false" ignorecooldown="true">
+    <!-- Mission EventSets -->
+    <EventSet identifier="outposteventsDH_inner" minleveldifficulty="0" maxleveldifficulty="100" allowatstart="true" eventcount="1" chooserandom="true" exhaustible="true">
+      <ScriptedEvent identifier="DifficultHunting" />
+    </EventSet>
+  </EventSet>
+</RandomEvents>

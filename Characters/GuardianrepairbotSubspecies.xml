@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="Guardianrepairbot" speciesname="GuardianrepairbotSubspecies" speciestranslationoverride="Guardianrepairbot" Group="abyss">
+  <ai>
+    <target Tag="PortalguardianSubspecies" State="Attack" Priority="100" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Circle" PrioritizeSubCenter="False" SweepDistance="2000" SweepStrength="5" SweepSpeed="1" circlerotationspeed="0.5" dynamiccirclerotationspeed="true" CircleRandomRotationFactor="0.5" circlestrikedistancemultiplier="0" circlemaxrandomoffset="0" circlestartdistance="400" />
+    <target Tag="CyborgwormSubspecies" State="Attack" Priority="100" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Circle" PrioritizeSubCenter="False" SweepDistance="2000" SweepStrength="5" SweepSpeed="1" circlerotationspeed="0.5" dynamiccirclerotationspeed="true" CircleRandomRotationFactor="0.5" circlestrikedistancemultiplier="0" circlemaxrandomoffset="0" circlestartdistance="400" />
+  </ai>
+  <ragdoll scalemultiplier="1.5" />
+</Charactervariant>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character SpeciesName="Ed209" Tags="" SpeciesTranslationOverride="" DisplayName="ED-209" Group="Ed209" Humanoid="False" HasInfo="False" CanInteract="True" CanClimb="True" ForceSlowClimbing="False" Husk="False" HuskedSpecies="" NonHuskedSpecies="" UseHuskAppendage="False" NeedsAir="False" NeedsWater="False" UseHumanAI="False" IsMachine="True" CanSpeak="False" ShowHealthBar="True" UseBossHealthBar="False" Noise="300" Visibility="300" BloodDecal="blackblood" BleedParticleAir="blackblooddrop" BleedParticleWater="blackwaterblood" BleedParticleMultiplier="1" CanEat="False" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="True" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" AITurretPriority="1" AISlowTurretPriority="1" DespawnContainer="" MusicType="monster" MusicCommonness="1" MusicRangeMultiplier="1" UnlockKillAchievementForWholeCrew="False">
+  <ragdolls folder="default" />
+  <animations folder="default" />
+  <damageemitter drawontop="True" Particle="blackgib" AngleMin="0" AngleMax="360" ScaleMin="0.1" ScaleMax="0.3" VelocityMin="50" VelocityMax="300" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="5" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <gibemitter Particle="blackgib" AngleMin="0" AngleMax="360" ScaleMin="0.2" ScaleMax="0.3" VelocityMin="200" VelocityMax="500" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="5" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <health minvitality="-100" Vitality="500" DoesBleed="False" CrushDepth="Infinity" UseHealthWindow="False" BleedingReduction="10" BurnReduction="0.2" ConstantHealthRegeneration="1" HealthRegenerationWhenEating="0" StunImmunity="True" PoisonImmunity="True" PoisonVulnerability="0" EmpVulnerability="1" ApplyMovementPenalties="True" DieFromBeheading="False" AllowSeveringLegs="False" ApplyAfflictionColors="False" Immunities="">
+    <Limb name="Head">
+      <VitalityMultiplier type="burn" multiplier="2.0" />
+    </Limb>
+    <Limb name="Torso">
+      <VitalityMultiplier type="burn" multiplier="2.0" />
+    </Limb>
+    <Limb name="LeftArm">
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="RightArm">
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="LeftLeg">
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+    <Limb name="RightLeg">
+      <VitalityMultiplier type="burn" multiplier="1.0" />
+    </Limb>
+  </health>
+  <inventory Slots="RightHand, LeftHand, Head, Any, Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="8">
+    <Item equip="true" Identifier="idcard" />
+    <Item Identifier="ED209remotecontrol" />
+  </inventory>
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_idle1.ogg" State="Idle" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_idle1.ogg" State="Idle" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_idle1.ogg" State="Idle" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_idle1.ogg" State="Idle" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_damage1.ogg" State="Attack" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_damage2.ogg" State="Attack" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_damage3.ogg" State="Attack" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_damage4.ogg" State="Attack" Range="1000" Volume="1" Tags="" />
+  <sound File="Content/Characters/Defensebot/DEFENCEBOT_interact1.ogg" State="Happy" Range="1000" Volume="1" Tags="" />
+  <ai CombatStrength="1" Sight="10" Hearing="10" MaxPerceptionDistance="-1" AggressionHurt="100" AggressionGreed="1" FleeHealthThreshold="0" AttackWhenProvoked="True" AvoidGunfire="False" DamageThreshold="0" AvoidTime="0" MinFleeTime="0" AggressiveBoarding="True" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" RandomAttack="True" CanOpenDoors="True" UsePathFindingToGetInside="True" KeepDoorsClosed="False" AvoidAbyss="False" StayInAbyss="False" PatrolFlooded="True" PatrolDry="True" StartAggression="0" MaxAggression="100" AggressionCumulation="70" WallTargetingMethod="Target" PlayDeadProbability="0">
+    <target Tag="hostile" State="Attack" Priority="100" ReactDistance="0" AttackDistance="1000" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreTargetInside="False" IgnoreTargetOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="stronger" State="Attack" Priority="90" ReactDistance="0" AttackDistance="1000" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreTargetInside="False" IgnoreTargetOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="human" State="Attack" Priority="80" ReactDistance="0" AttackDistance="1000" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreTargetInside="False" IgnoreTargetOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="door" State="Attack" Priority="30" ReactDistance="0" AttackDistance="500" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreTargetInside="False" IgnoreTargetOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="wall" State="Attack" Priority="10" ReactDistance="0" AttackDistance="1000" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreTargetInside="False" IgnoreTargetOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+  </ai>
+</Character>

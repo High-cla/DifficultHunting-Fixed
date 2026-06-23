@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+  <NestMission identifier="crawlernest10DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="10000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="5" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="5" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="17" />
+      </Item>
+      <Item identifier="crawleregg" />
+      <Item identifier="crawleregg" />
+    </Items>
+    <Monster character="Crawler_large" min="10" max="15" />
+    <Monster character="Crawler_largeSubspecies" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.crawlernest10" text="missionmessage0.crawlernest10" />
+  </NestMission>
+  <NestMission identifier="crawlernest11DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="10000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="5" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="17" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="17" />
+      </Item>
+      <Item identifier="crawleregg" />
+      <Item identifier="crawleregg" />
+    </Items>
+    <Monster character="crawlerhusk" min="10" max="15" />
+    <Monster character="crawlerhusk" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.crawlernest11" text="missionmessage0.crawlernest11" />
+  </NestMission>
+  <NestMission identifier="mudraptornest10DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="15000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largemudraptoregg" />
+      <Item identifier="largemudraptoregg" />
+    </Items>
+    <Monster character="mudraptor_veteran" min="10" max="10" />
+    <Monster character="DoomMudraptor" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.mudraptornest10" text="missionmessage0.mudraptornest10" />
+  </NestMission>
+  <NestMission identifier="tigerthreshernest10DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="15000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="8" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="15" />
+      </Item>
+      <Item identifier="tigerthresheregg" />
+      <Item identifier="tigerthresheregg" />
+    </Items>
+    <Monster character="Tigerthresher" min="10" max="12" />
+    <Monster character="TigerthresherSubspecies" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.tigerthreshernest10" text="missionmessage0.tigerthreshernest10" />
+  </NestMission>
+  <NestMission identifier="Husk_prowler10DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="15000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="8" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="15" />
+      </Item>
+      <Item identifier="tigerthresheregg" />
+      <Item identifier="tigerthresheregg" />
+    </Items>
+    <Monster character="Husk_prowler" min="10" max="12" />
+    <Monster character="Husk_exosuit" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.tigerthreshernest10" text="missionmessage0.tigerthreshernest10" />
+  </NestMission>
+  <NestMission identifier="Husk_chimera10DH" tags="DifficultHunting" type="Nest" spawntype="cave" reward="15000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="100">
+    <Items>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="8" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="15" />
+      </Item>
+      <Item identifier="tigerthresheregg" />
+      <Item identifier="tigerthresheregg" />
+    </Items>
+    <Monster character="Husk_prowler" min="10" max="12" />
+    <Monster character="Husk_chimera" min="5" max="5" multiplayeronly="true" />
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="missionheader0.tigerthreshernest10" text="missionmessage0.tigerthreshernest10" />
+  </NestMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward10DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" monsterfile="EndwormSubspecies" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="missionheader0.huntinggroundsnoreward10" text="missionmessage0.huntinggroundsnoreward10" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward11DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" monsterfile="doomwormSubspecies" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="missionheader0.huntinggroundsnoreward11" text="missionmessage0.huntinggroundsnoreward11" />
+  </MonsterMission>
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward12DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaa" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="调查完毕" text="任务完成，回去汇报吧" />
+  </MonsterMission>
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward13DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaa" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="调查完毕" text="任务完成，回去汇报吧" />
+  </MonsterMission>
+  <MonsterMission name="调查神秘信号" identifier="huntinggroundsnoreward14DDH" type="Monster" tags="DifficultHunting" description="站点附近的深渊发现了奇怪的信号，联盟许诺给予前往调查的潜艇[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="目标已经探查完毕" missionfailure="任务失败" monsterfile="Charybdisaaaa" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="调查完毕" text="任务完成，回去汇报吧" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward13DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="6000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="CharybdisSubspecies" min="2" max="2" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward14DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="6000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="EndwormSubspecies" min="2" max="2" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward15DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="6000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="doomwormSubspecies" min="2" max="2" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已超越深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward16DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" monsterfile="LatcherSubspecies" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward17DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="8000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="LatcherSubspecies" min="2" max="2" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward18DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="CyborgwormSubspecies" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="凝视深渊" identifier="huntinggroundsnoreward19DH" type="Monster" tags="DifficultHunting" description="来自深渊的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="8000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="CyborgwormSubspecies" min="2" max="2" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="深渊共舞" identifier="huntinggroundsnorewardEND1DH" type="Monster" tags="DifficultHunting" description="三只深渊异兽狂宴邀请已经送达，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="10000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="EndwormSubspecies" min="1" max="1" />
+    <monster character="LatcherSubspecies" min="1" max="1" />
+    <monster character="CharybdisSubspecies" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狂宴结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="深渊狂舞" identifier="huntinggroundsnorewardEND2DH" type="Monster" tags="DifficultHunting" description="五只深渊异兽狂宴邀请已经送达，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="15000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="EndwormSubspecies" min="1" max="1" />
+    <monster character="LatcherSubspecies" min="1" max="1" />
+    <monster character="CharybdisSubspecies" min="1" max="1" />
+    <monster character="doomwormSubspecies" min="1" max="1" />
+    <monster character="CyborgwormSubspecies" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狂宴结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="机械侵袭" identifier="huntinggroundsnorewardEND3DH" type="Monster" tags="DifficultHunting" description="异星机械的侵袭已经抵达，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="10000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="PortalguardianSubspecies" min="1" max="1" />
+    <monster character="PortalguardianSubspecies" min="1" max="1" />
+    <monster character="PortalguardianSubspecies" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="机械侵袭已被击退" />
+  </MonsterMission>
+  <MonsterMission name="机械侵袭" identifier="huntinggroundsnorewardEND4DH" type="Monster" tags="DifficultHunting" description="异星机械的侵袭已经抵达，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="100" reward="10000" sonarlabel="深渊气息" maxsonarmarkerdistance="30000" successmessage="挑战已经完成" missionfailure="任务失败" spawntype="Abyss" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="CyborgwormSubspecies" min="1" max="1" />
+    <monster character="CyborgwormSubspecies" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="机械侵袭已被击退" />
+  </MonsterMission>
+  <MonsterMission name="迷之船只" identifier="huntingCarriere10DH" type="Monster" tags="DifficultHunting" description="一艘货船在航道附近发现几艘未知船只，，为了防止附近出现危险，希望你去前去查明，事后给予[reward]mk奖励。" commonness="100" reward="3000" sonarlabel="迷之船只" maxsonarmarkerdistance="30000" successmessage="未知船只已查明" missionfailure="任务失败" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="CarrierEXs" min="2" max="3" />
+    <monster character="CarrierEX2s" min="2" max="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="目标已被歼灭" />
+  </MonsterMission>
+  <MonsterMission name="迷之船只" identifier="huntingCarriere11DH" type="Monster" tags="DifficultHunting" description="一艘货船在航道附近发现几艘未知船只，，为了防止附近出现危险，希望你去查明正体，事后给予[reward]mk奖励。" commonness="100" reward="3000" sonarlabel="迷之船只" maxsonarmarkerdistance="30000" successmessage="未知船只已查明" missionfailure="任务失败" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="CarrierEXs" min="2" max="3" />
+    <monster character="CarrierEX3s" min="2" max="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="目标已被歼灭" />
+  </MonsterMission>
+  <MonsterMission name="猎杀摩螺克群" identifier="killmolochblack10" type="Monster" tags="DifficultHunting" description="一群攻击型极强的摩螺克正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="摩螺克群" maxsonarmarkerdistance="30000" successmessage="摩螺克群已被清除" missionfailure="任务失败" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="MolochblackSubspecies" min="3" max="3" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="摩螺克群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="猎杀摩螺克神速种" identifier="killmolochblack11DH" type="Monster" tags="DifficultHunting" description="一只攻击型极强的摩螺克正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="4000" sonarlabel="摩螺克神速种" maxsonarmarkerdistance="30000" successmessage="摩螺克群已被清除" missionfailure="任务失败" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="MolochblackSubspecies2" min="3" max="4" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="摩螺克群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="黄金之风" identifier="killhammerheadgold10DH" tags="DifficultHunting" type="Monster" description="金色的风暴正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="5000" sonarlabel="黄金之风" maxsonarmarkerdistance="10000" successmessage="金色的风暴已经停息" missionfailure="任务失败" difficulty="4">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="5" />
+    <Reputation identifier="clowns" amount="5" />
+    <monster character="HammerheadgoldSubspecies" min="8" max="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="战胜风暴" text="金色风暴已溃散，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="“冈钉”达因斯雷夫" identifier="killgiantspineling10DH" description="在《高达铁血》中的机甲都有光涂层，光能武器完全不起作用。因此在铁血里，动能武器才是王者，而动能武器中的bug级装备就是人称“冈钉”的达因斯雷夫。" type="Monster" tags="DifficultHunting" difficulty="4" commonness="100" reward="7000" maxsonarmarkerdistance="10000" successmessage="达因斯雷夫也无法贯穿你的主角光环" missionfailure="任务失败" sonarlabel="达因斯雷夫">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="5" />
+    <Reputation identifier="clowns" amount="5" />
+    <monster character="Spineling_giantSubspecies" min="5" max="7" />
+    <monster character="SpinelingSubspecies" min="8" max="10" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="折断冈钉" text="达因斯雷夫已被你折断" />
+  </MonsterMission>
+  <MonsterMission name="迅猛龙阻击战" identifier="killmudraptors10DH" description="一群特别凶猛的迅猛龙正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" type="Monster" tags="DifficultHunting" difficulty="4" commonness="100" reward="6000" sonarlabel="迅猛龙群" maxsonarmarkerdistance="10000" successmessage="迅猛龙群已被清除" missionfailure="任务失败">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="DoomMudraptor" min="7" max="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="迅猛龙已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="爬行者之母歼灭战" identifier="killcrawlerswarm10DH" description="复数爬行者之母带领着大群爬行者袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" type="Monster" tags="DifficultHunting" difficulty="4" commonness="100" reward="4000" sonarlabel="藻类爬行者群" maxsonarmarkerdistance="10000" successmessage="藻类爬行者群已被清除" missionfailure="任务失败">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="Crawler_largeSubspecies" min="7" max="10" />
+    <monster character="Crawlerbroodmother_mSubspecies" min="3" max="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="藻类爬行者已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="虎尾煞剿灭战" identifier="killTigerthresher10DH" description="一群特别凶猛的虎尾煞正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" type="Monster" tags="DifficultHunting" difficulty="4" commonness="100" reward="4000" sonarlabel="虎尾煞群" maxsonarmarkerdistance="10000" successmessage="虎尾煞群已被清除" missionfailure="任务失败">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="TigerthresherSubspecies" min="13" max="17" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="虎尾煞群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="爬行者歼灭战" identifier="killcrawlerswarm11DH" description="一个大型爬行者群正在袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" type="Monster" tags="DifficultHunting" difficulty="4" commonness="100" reward="4000" sonarlabel="藻类爬行者群" maxsonarmarkerdistance="10000" successmessage="藻类爬行者群已被清除" missionfailure="任务失败">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="huskcult" amount="3" />
+    <monster character="Crawler_largeSubspecies" min="10" max="15" />
+    <monster character="Crawler_largeSubspecies" min="5" max="7" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="藻类爬行者已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="治疗感染" identifier="killcrawlerhusk12DH" type="Monster" tags="DifficultHuntingCS" description="传言有一只钢铁巨兽[location1]和[location2]之间游荡，使得很多船长拒绝经过，为防止恐惧扩散，联盟希望你去附近海域进行调查。" difficulty="4" commonness="100" reward="10000" sonarlabel="感染源" maxsonarmarkerdistance="10000" successmessage="治疗感染，一次一颗子弹" missionfailure="任务失败">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="clowns" amount="3" />
+    <monster character="Husk_exosuit01" min="1" max="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="感染源已清除，返回站点领取奖励" />
+  </MonsterMission>
+
+  <OutpostNestMission name="迅猛龙大型繁殖地" identifier="abandonedoutpostmudraptorDH" tags="abandonedoutpost" type="OutpostDestroy" reward="5000" difficulty="4" commonness="100" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="mudraptor" min="2" max="4" />
+      <Character identifier="DoomMudraptor" min="10" max="12" />
+    </Characters>
+    <Items>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+    </Items>
+    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true" />
+    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters" />
+  </OutpostNestMission>
+  <OutpostNestMission name="画皮大型繁殖地" identifier="abandonedoutpostHuskrDH" tags="abandonedoutpost" type="OutpostDestroy" reward="5000" difficulty="4" commonness="100" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="clowns" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="Husk_prowler" min="2" max="4" />
+      <Character identifier="Husk_chimera" min="2" max="4" />
+      <Character identifier="Husk_exosuit" min="2" max="4" />
+      <Character identifier="HuskSubspecies" min="6" max="10" />
+    </Characters>
+    <Items>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest" />
+    </Items>
+    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true" />
+    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters" />
+  </OutpostNestMission>
+</Missions>

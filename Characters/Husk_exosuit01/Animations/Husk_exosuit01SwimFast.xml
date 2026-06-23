@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Husk_exosuit01SwimFast footrotatestrength="15" type="Husk_exosuit01" LegMoveAmount="0.32747388" LegCycleLength="14.365124" FootAngle="65" HandMoveAmount="0.0013822503,-0.001424469" HandCycleSpeed="0.0055290014" HandMoveOffset="0,0" ArmMoveStrength="1" HandMoveStrength="0.70000017" FixedHeadAngle="True" SteerTorque="1" LegTorque="12" AnimationType="SwimFast" MovementSpeed="3.0201669" CycleSpeed="3.0201669" HeadAngle="30" TorsoAngle="0" HeadTorque="40" TorsoTorque="30" FootTorque="5" ArmIKStrength="3" HandIKStrength="2.5" />

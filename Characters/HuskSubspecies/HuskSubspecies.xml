@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="Husk" speciesname="HuskSubspecies" hearing="5" speciestranslationoverride="Husk">
+  <ragdoll folder="%ModDir%/Characters/HuskSubspecies/HuskSubspeciesDefaultRagdoll.xml" />
+  <health vitality="400" stunimmunity="true" />
+  <attack damagemultiplier="3" rangemultiplier="1.2" />
+  <ai avoidgunfire="False" combatstrength="490" />
+</Charactervariant>

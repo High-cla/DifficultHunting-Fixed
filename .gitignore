@@ -1,0 +1,7 @@
+# Workspace data
+.omo/
+.codebase-memory/
+
+# OS files
+Thumbs.db
+.DS_Store

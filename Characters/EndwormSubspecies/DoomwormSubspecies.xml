@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="EndwormSubspecies" speciesname="DoomwormSubspecies" speciestranslationoverride="Doomworm" usebosshealthbar="true">
+  <health vitality="15000" />
+  <ragdolls scalemultiplier="1.2" />
+  <attack damagemultiplier="2" rangemultiplier="1.5" impactmultiplier="2" />
+  <ai avoidgunfire="False" sight="1" hearing="3" />
+</Charactervariant>
