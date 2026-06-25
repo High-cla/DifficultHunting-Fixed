@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="画皮增强 高难狩猎" steamworkshopid="2914921497" corepackage="false" modversion="1.0.15" gameversion="1.4.4.1">
+  <Missions file="%ModDir%/Missions.xml" />
+  <Text file="%ModDir%/SimplifiedChinese.xml" />
+  <Character file="%ModDir%/Characters/Endwormhusk2/Endwormhusk2.xml" />
+  <Character file="%ModDir%/Characters/Charybdishusk2/Charybdishusk2.xml" />
+  <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
+  <RandomEvents file="%ModDir%/randomevents_campaign.xml" />
+  <RandomEvents file="%ModDir%/OutpostEvents.xml" />
+  <NPCSets file="%ModDir%/OutpostGenerationNpcs.xml" />
+</contentpackage>

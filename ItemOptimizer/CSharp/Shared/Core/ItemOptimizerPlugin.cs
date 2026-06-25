@@ -1,0 +1,463 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using Barotrauma;
+using Barotrauma.Items.Components;
+using HarmonyLib;
+using ItemOptimizerMod.Patches;
+using ItemOptimizerMod.SignalGraph;
+using Microsoft.Xna.Framework;
+
+namespace ItemOptimizerMod
+{
+    public sealed partial class ItemOptimizerPlugin : IAssemblyPlugin
+    {
+        private const string HarmonyId = "ItemOptimizerMod";
+        internal static ItemOptimizerPlugin Instance;
+
+        // Dedup guard: multiplayer may fire our Harmony postfix from both CL+SV threads.
+        private static bool _roundInitialized;
+
+        internal static Harmony harmony;
+
+        // Cached method references for manual patching
+        private static MethodInfo hasStatusTagOriginal;
+        private static MethodInfo pumpUpdateOriginal;
+
+        private static HarmonyMethod hasStatusTagTranspiler;
+        private static HarmonyMethod pumpUpdateTranspiler;
+        private static MethodInfo itemUpdateOriginal;
+        private static HarmonyMethod itemUpdateTranspiler;
+        private static HarmonyMethod componentDispatchTranspiler;
+
+        // Partial methods for platform-specific initialization
+        partial void InitializeClient();
+        partial void DisposeClient();
+        partial void InitializeServer();
+        partial void DisposeServer();
+        partial void RegisterProxyHandlers();
+
+        public void PreInitPatching() { }
+
+        public void Initialize()
+        {
+            Instance = this;
+
+            try
+            {
+                OptimizerConfig.Load();
+            }
+            catch (Exception e)
+            {
+                LuaCsLogger.LogError($"[ItemOptimizer] Config load failed, using defaults: {e.Message}");
+            }
+
+            Localization.Init();
+
+            try
+            {
+                harmony?.UnpatchSelf();
+                harmony = new Harmony(HarmonyId);
+
+                CacheMethodReferences();
+                ApplyPatches();
+                PerfProfiler.RegisterPatches(harmony);
+                PerfCommands.Register();
+
+            // Spike detector — always-on per-item timing for diagnosing frame spikes
+            SpikeDetector.Initialize(harmony);
+            SpikeDetector.ThresholdMs = OptimizerConfig.SpikeThresholdMs;
+            if (OptimizerConfig.EnableSpikeDetector)
+                SpikeDetector.SetEnabled(true);
+
+            // Gap thread-safety patches (for MiscParallel: checkedHulls + outsideCollisionBlocker)
+            if (OptimizerConfig.EnableMiscParallel)
+                GapSafetyPatch.RegisterPatches(harmony);
+
+            // UpdateAll takeover — replaces ItemUpdatePatch + ParallelDispatchPatch
+            // Single prefix on MapEntity.UpdateAll, zero per-item Harmony overhead
+            UpdateAllTakeover.Register(harmony);
+
+            // Signal graph accelerator — compile signal circuit to register-based eval
+            if (OptimizerConfig.SignalGraphMode > 0)
+                SignalGraphPatches.Register(harmony);
+
+            // MotionSensor/WaterDetector complete rewrites — now dispatched via ComponentDispatchTranspiler
+            // Just log, no individual Harmony prefix registration needed
+            if (OptimizerConfig.EnableMotionSensorRewrite)
+                LuaCsLogger.Log("[ItemOptimizer] MotionSensorRewrite: dispatch via ComponentDispatchTranspiler");
+            if (OptimizerConfig.EnableWaterDetectorRewrite)
+                LuaCsLogger.Log("[ItemOptimizer] WaterDetectorRewrite: dispatch via ComponentDispatchTranspiler");
+
+            // Power system rewrites — initialize delegates, dispatched via ComponentDispatchTranspiler
+            if (OptimizerConfig.EnableRelayRewrite)
+                RelayRewrite.Init();
+            if (OptimizerConfig.EnablePowerTransferRewrite)
+                PowerTransferRewrite.Init();
+            if (OptimizerConfig.EnablePowerContainerRewrite)
+                LuaCsLogger.Log("[ItemOptimizer] PowerContainerRewrite: dispatch via ComponentDispatchTranspiler");
+
+            // Character stagger — enemy AI load distribution (shared: both server and client)
+            if (OptimizerConfig.EnableCharacterStagger)
+                CharacterStaggerPatch.Register(harmony);
+
+            // Character zone skip — freeze NPCs in Dormant/Unloaded zones (always registered, gated by runtime flag)
+            CharacterZoneSkipPatch.Register(harmony);
+
+            // Round lifecycle — own Harmony patches instead of LuaCs IEventRoundStarted/Ended
+            // (LuaCs event dispatch is unreliable in some versions)
+            RegisterRoundLifecyclePatches();
+
+            InitializeClient();
+            InitializeServer();
+
+            LuaCsLogger.Log($"[ItemOptimizer] Initialized. " +
+                $"ColdStorage={OptimizerConfig.EnableColdStorageSkip}, " +
+                $"GroundItem={OptimizerConfig.EnableGroundItemThrottle}(skip={OptimizerConfig.GroundItemSkipFrames}), " +
+                $"HasStatusTagCache={OptimizerConfig.EnableHasStatusTagCache}, " +
+                $"AnimLOD={OptimizerConfig.EnableAnimLOD}, " +
+                $"CharStagger={OptimizerConfig.EnableCharacterStagger}(groups={OptimizerConfig.CharacterStaggerGroups}), " +
+                $"LadderFix={OptimizerConfig.EnableLadderFix}, " +
+                $"MiscParallel={OptimizerConfig.EnableMiscParallel}, " +
+                $"ItemRules={OptimizerConfig.ItemRules.Count}, " +
+                $"ModOpt={OptimizerConfig.ModOptLookup.Count}, " +
+                $"ServerDedup={OptimizerConfig.EnableServerHashSetDedup}, " +
+                $"MotionRewrite={OptimizerConfig.EnableMotionSensorRewrite}, " +
+                $"WaterDetRewrite={OptimizerConfig.EnableWaterDetectorRewrite}, " +
+                $"RelayRewrite={OptimizerConfig.EnableRelayRewrite}, " +
+                $"PowerTransferRewrite={OptimizerConfig.EnablePowerTransferRewrite}, " +
+                $"PowerContainerRewrite={OptimizerConfig.EnablePowerContainerRewrite}, " +
+                $"NativeRuntime={OptimizerConfig.EnableNativeRuntime}");
+            }
+            catch (Exception e)
+            {
+                LuaCsLogger.LogError($"[ItemOptimizer] Initialize failed: {e.GetType().Name}: {e.Message}\n{e.StackTrace}");
+                DebugConsole.ThrowError($"[ItemOptimizer] Initialization error (mod will use defaults): {e.Message}", e);
+            }
+        }
+
+        public void OnLoadCompleted()
+        {
+            // Safe to enable takeover now — all systems are initialized
+            UpdateAllTakeover.Enabled = true;
+            RegisterProxyHandlers();
+
+            // Signal graph: set mode early, but defer Compile() to OnRoundStart()
+            // when submarine items actually exist in Item.ItemList
+            if (OptimizerConfig.SignalGraphMode > 0)
+            {
+                SignalGraphEvaluator.SetMode(OptimizerConfig.SignalGraphMode);
+            }
+
+            LuaCsLogger.Log("[ItemOptimizer] UpdateAllTakeover enabled (OnLoadCompleted)");
+        }
+
+        // ═══ Round Lifecycle — own Harmony patches ═══
+        // LuaCs IEventRoundStarted/IEventRoundEnded dispatch is unreliable
+        // (depends on LuaCs version / event service init). Direct Harmony is bulletproof.
+
+        private static void RegisterRoundLifecyclePatches()
+        {
+            // PostFix on GameSession.StartRound(LevelData, bool, SubmarineInfo, SubmarineInfo)
+            var startRound = AccessTools.Method(typeof(GameSession), nameof(GameSession.StartRound),
+                new[] { typeof(LevelData), typeof(bool), typeof(SubmarineInfo), typeof(SubmarineInfo) });
+            if (startRound != null)
+            {
+                harmony.Patch(startRound,
+                    postfix: new HarmonyMethod(AccessTools.Method(typeof(ItemOptimizerPlugin), nameof(OnRoundStartPostfix))));
+                LuaCsLogger.Log("[ItemOptimizer] Round lifecycle: StartRound postfix registered");
+            }
+            else
+            {
+                LuaCsLogger.LogError("[ItemOptimizer] Round lifecycle: GameSession.StartRound not found!");
+            }
+
+            // Prefix on GameSession.EndRound (entities still alive)
+            var endRound = AccessTools.Method(typeof(GameSession), nameof(GameSession.EndRound));
+            if (endRound != null)
+            {
+                harmony.Patch(endRound,
+                    prefix: new HarmonyMethod(AccessTools.Method(typeof(ItemOptimizerPlugin), nameof(OnRoundEndPrefix))));
+                LuaCsLogger.Log("[ItemOptimizer] Round lifecycle: EndRound prefix registered");
+            }
+            else
+            {
+                LuaCsLogger.LogError("[ItemOptimizer] Round lifecycle: GameSession.EndRound not found!");
+            }
+        }
+
+        private static void OnRoundStartPostfix()
+        {
+            DebugConsole.NewMessage($"[ItemOptimizer] OnRoundStart (initialized={_roundInitialized})", Color.Cyan);
+            if (_roundInitialized) return;
+            _roundInitialized = true;
+
+            DebugConsole.NewMessage("[ItemOptimizer] Clearing caches + initializing for new round", Color.LimeGreen);
+
+            // ── Clear all entity-ID-indexed caches (stale from previous round) ──
+            UpdateAllTakeover.ClearItemCaches();
+            MotionSensorRewrite.Reset();
+            HullCharacterTracker.Reset();
+            WaterDetectorRewrite.Reset();
+            RelayRewrite.Reset();
+            PowerTransferRewrite.Reset();
+            PowerContainerRewrite.Reset();
+            Proxy.ProxyRegistry.ClearStaleAttachments();
+
+            // ── Signal graph: recompile for new round's items ──
+            if (OptimizerConfig.SignalGraphMode > 0)
+            {
+                SignalGraphEvaluator.Compile();
+            }
+
+            // ── NativeRuntime lifecycle ──
+            World.NativeRuntimeBridge.OnRoundStart();
+        }
+
+        private static void OnRoundEndPrefix()
+        {
+            DebugConsole.NewMessage($"[ItemOptimizer] OnRoundEnd (initialized={_roundInitialized})", Color.Cyan);
+            if (!_roundInitialized) return;
+            _roundInitialized = false;
+
+            DebugConsole.NewMessage("[ItemOptimizer] Cleaning up NativeRuntime", Color.Yellow);
+
+            if (World.NativeRuntimeBridge.IsEnabled)
+                World.NativeRuntimeBridge.OnRoundEnd();
+        }
+
+        public void Dispose()
+        {
+            _roundInitialized = false;
+            DisposeClient();
+            DisposeServer();
+            World.NativeRuntimeBridge.OnRoundEnd();
+            PerfCommands.Unregister();
+            PerfProfiler.Reset();
+            SpikeDetector.Reset();
+            CharacterStaggerPatch.Unregister(harmony);
+            CharacterZoneSkipPatch.Unregister(harmony);
+            MotionSensorRewrite.Reset();
+            HullCharacterTracker.Reset();
+            WaterDetectorRewrite.Reset();
+            RelayRewrite.Reset();
+            PowerTransferRewrite.Reset();
+            PowerContainerRewrite.Reset();
+            SignalGraphEvaluator.Reset();
+            SignalGraphPatches.Unregister(harmony);
+            UpdateAllTakeover.Unregister(harmony);
+            Proxy.ProxyRegistry.DetachAll();
+            harmony?.UnpatchSelf();
+            harmony = null;
+            Stats.Reset();
+            Instance = null;
+        }
+
+        private static void CacheMethodReferences()
+        {
+            hasStatusTagOriginal = AccessTools.Method(typeof(PropertyConditional), nameof(PropertyConditional.Matches));
+
+            hasStatusTagTranspiler = new HarmonyMethod(AccessTools.Method(typeof(HasStatusTagCachePatch), nameof(HasStatusTagCachePatch.Transpiler)));
+
+            pumpUpdateOriginal = AccessTools.Method(typeof(Pump), nameof(Pump.Update));
+            pumpUpdateTranspiler = new HarmonyMethod(AccessTools.Method(typeof(PumpPatch), nameof(PumpPatch.Transpiler)));
+
+            itemUpdateOriginal = AccessTools.Method(typeof(Item), nameof(Item.Update),
+                new[] { typeof(float), typeof(Camera) });
+            if (ItemUpdateTranspiler.CanPatch)
+                itemUpdateTranspiler = new HarmonyMethod(AccessTools.Method(typeof(ItemUpdateTranspiler), nameof(ItemUpdateTranspiler.Transpiler)));
+
+            if (ComponentDispatchTranspiler.CanPatch)
+                componentDispatchTranspiler = new HarmonyMethod(AccessTools.Method(typeof(ComponentDispatchTranspiler), nameof(ComponentDispatchTranspiler.Transpiler)));
+        }
+
+        private static void ApplyPatches()
+        {
+            // HasStatusTagCache uses a transpiler (always applied — checks config flag at runtime).
+            // This avoids per-call Harmony dispatch overhead for non-HasStatusTag Matches calls.
+            if (hasStatusTagOriginal != null)
+                harmony.Patch(hasStatusTagOriginal, transpiler: hasStatusTagTranspiler);
+            // ButtonTerminal — now dispatched via ComponentDispatchTranspiler, no individual patch needed
+            if (OptimizerConfig.EnablePumpOpt && pumpUpdateOriginal != null)
+                harmony.Patch(pumpUpdateOriginal, transpiler: pumpUpdateTranspiler);
+            // Item.Update transpiler: wraps ApplyStatusEffects with hasStatusEffectsOfType[] check.
+            // Always applied (like HasStatusTagCache) — the wrapper is a no-op when effects exist.
+            if (itemUpdateOriginal != null && itemUpdateTranspiler != null)
+                harmony.Patch(itemUpdateOriginal, transpiler: itemUpdateTranspiler);
+            // Component dispatch transpiler: replaces component.Update/UpdateBroken callvirts
+            // with unified DispatchUpdate that routes to optimized implementations.
+            // Must be applied AFTER ItemUpdateTranspiler (Harmony chains transpilers).
+            if (itemUpdateOriginal != null && componentDispatchTranspiler != null)
+                harmony.Patch(itemUpdateOriginal, transpiler: componentDispatchTranspiler);
+        }
+
+        // ── Toggle support (called from GUI) ──
+
+        internal static void SetStrategyEnabled(string name, bool enabled)
+        {
+            SetStrategyValue(name, enabled ? 1 : 0);
+        }
+
+        private static readonly Dictionary<string, Action<int>> _strategyHandlers = new(StringComparer.Ordinal)
+        {
+            ["cold_storage"] = HandleColdStorage,
+            ["ground_item"] = HandleGroundItem,
+            ["has_status_tag_cache"] = HandleHasStatusTagCache,
+            ["wire_skip"] = HandleWireSkip,
+            ["motion_rewrite"] = HandleMotionRewrite,
+            ["water_det_rewrite"] = HandleWaterDetRewrite,
+            ["anim_lod"] = HandleAnimLod,
+            ["char_stagger"] = HandleCharStagger,
+            ["ladder_fix"] = HandleLadderFix,
+            ["platform_fix"] = HandlePlatformFix,
+            ["server_hashset_dedup"] = HandleServerHashSetDedup,
+            ["proxy_system"] = HandleProxySystem,
+            ["signal_graph_accel"] = HandleSignalGraphAccel,
+            ["relay_rewrite"] = HandleRelayRewrite,
+            ["power_transfer_rewrite"] = HandlePowerTransferRewrite,
+            ["power_container_rewrite"] = HandlePowerContainerRewrite,
+            ["native_runtime"] = HandleNativeRuntime,
+        };
+
+        internal static void SetStrategyValue(string name, int value)
+        {
+            if (_strategyHandlers.TryGetValue(name, out var handler))
+                handler(value);
+        }
+
+
+        private static void HandleColdStorage(int value)
+        {
+            OptimizerConfig.EnableColdStorageSkip = value > 0;
+        }
+
+        private static void HandleGroundItem(int value)
+        {
+            OptimizerConfig.EnableGroundItemThrottle = value > 0;
+        }
+
+        private static void HandleHasStatusTagCache(int value)
+        {
+            OptimizerConfig.EnableHasStatusTagCache = value > 0;
+            if (value == 0) HasStatusTagCachePatch.ClearCache();
+        }
+
+        private static void HandleWireSkip(int value)
+        {
+            OptimizerConfig.EnableWireSkip = value > 0;
+        }
+
+        private static void HandleMotionRewrite(int value)
+        {
+            bool enable = value > 0;
+            var cascades = ToggleValidator.ValidateChange("motion_rewrite", enable);
+            if (cascades == null) return;
+            foreach (var (t, v) in cascades)
+                SetStrategyValue(t, v ? 1 : 0);
+            OptimizerConfig.EnableMotionSensorRewrite = enable;
+        }
+
+        private static void HandleWaterDetRewrite(int value)
+        {
+            OptimizerConfig.EnableWaterDetectorRewrite = value > 0;
+        }
+
+        private static void HandleAnimLod(int value)
+        {
+            OptimizerConfig.EnableAnimLOD = value > 0;
+        }
+
+        private static void HandleCharStagger(int value)
+        {
+            OptimizerConfig.EnableCharacterStagger = value > 0;
+        }
+
+        private static void HandleLadderFix(int value)
+        {
+            OptimizerConfig.EnableLadderFix = value > 0;
+        }
+
+        private static void HandlePlatformFix(int value)
+        {
+            OptimizerConfig.EnablePlatformFix = value > 0;
+        }
+
+        private static void HandleServerHashSetDedup(int value)
+        {
+            OptimizerConfig.EnableServerHashSetDedup = value > 0;
+            ToggleServerOptimizer(value > 0);
+        }
+
+        private static void HandleProxySystem(int value)
+        {
+            OptimizerConfig.EnableProxySystem = value > 0;
+            if (value == 0) Proxy.ProxyRegistry.DetachAllItems();
+        }
+
+        private static void HandleSignalGraphAccel(int value)
+        {
+            OptimizerConfig.SignalGraphMode = Math.Clamp(value, 0, 2);
+            if (value > 0)
+            {
+                SignalGraphPatches.Register(harmony);
+                SignalGraphEvaluator.SetMode(value);
+                SignalGraphEvaluator.Compile();
+            }
+            else
+            {
+                SignalGraphEvaluator.SetMode(0);
+                SignalGraphPatches.Unregister(harmony);
+            }
+        }
+
+        private static void HandleRelayRewrite(int value)
+        {
+            OptimizerConfig.EnableRelayRewrite = value > 0;
+            if (value > 0) RelayRewrite.Init();
+        }
+
+        private static void HandlePowerTransferRewrite(int value)
+        {
+            OptimizerConfig.EnablePowerTransferRewrite = value > 0;
+            if (value > 0) PowerTransferRewrite.Init();
+        }
+
+        private static void HandlePowerContainerRewrite(int value)
+        {
+            OptimizerConfig.EnablePowerContainerRewrite = value > 0;
+        }
+
+        private static void HandleNativeRuntime(int value)
+        {
+            bool enable = value > 0;
+            // Validate: turning ON requires MotionSensorRewrite
+            var cascades = ToggleValidator.ValidateChange("native_runtime", enable);
+            if (cascades == null) return; // blocked
+
+            OptimizerConfig.EnableNativeRuntime = enable;
+            if (enable)
+            {
+                if (!World.NativeRuntimeBridge.IsEnabled)
+                    World.NativeRuntimeBridge.OnRoundStart();
+            }
+            else
+            {
+                if (World.NativeRuntimeBridge.IsEnabled)
+                    World.NativeRuntimeBridge.OnRoundEnd();
+            }
+        }
+
+        /// <summary>
+        /// Toggle ServerOptimizer via reflection — avoids referencing Server-only type from Shared code.
+        /// </summary>
+        private static void ToggleServerOptimizer(bool enable)
+        {
+            var type = Type.GetType("ItemOptimizerMod.ServerOptimizer");
+            if (type == null) return; // Not on server build
+            var method = type.GetMethod(enable ? "RegisterPatches" : "UnregisterPatches",
+                BindingFlags.Static | BindingFlags.NonPublic);
+            method?.Invoke(null, new object[] { harmony });
+        }
+
+    }
+}

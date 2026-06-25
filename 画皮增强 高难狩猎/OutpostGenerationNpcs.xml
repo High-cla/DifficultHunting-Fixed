@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <npcset identifier="DHhusknpc">
+    <npc identifier="DHhusknpc_1" job="Captain" spawnpointtags="admin" behavior="Passive" preferredoutpostmoduletypes="admin,adminmodule,researchmodule">
+      <Character name="神秘人索菲娅" speciesname="human" gender="female" race="Asian" headspriteid="8" hairindex="12" beardindex="0" moustacheindex="0" faceattachmentindex="0" personality="Fearful">
+        <job name="船长" identifier="Captain">
+          <skill identifier="electrical" level="100" />
+          <skill identifier="mechanical" level="100" />
+          <skill identifier="weapons" level="100" />
+          <skill identifier="medical" level="100" />
+          <skill identifier="helm" level="100" />
+        </job>
+      </Character>
+      <ItemSet commonness="1">
+        <Item identifier="idcard" equip="true" />
+        <Item identifier="captainscap1" equip="true" />
+        <Item identifier="captainsuniform1" equip="true" />
+      </ItemSet>
+    </npc>
+    <!-- Reserved for future use -->
+    <npc identifier="DHhusknpc_2" job="Captain" spawnpointtags="admin" behavior="Passive" preferredoutpostmoduletypes="admin,adminmodule,researchmodule">
+      <Character name="神秘人提耶拉" speciesname="human" gender="male" race="Asian" headspriteid="8" hairindex="8" beardindex="0" moustacheindex="0" faceattachmentindex="0" personality="Fearful">
+        <job name="船长" identifier="Captain">
+          <skill identifier="electrical" level="100" />
+          <skill identifier="mechanical" level="100" />
+          <skill identifier="weapons" level="100" />
+          <skill identifier="medical" level="100" />
+          <skill identifier="helm" level="100" />
+        </job>
+      </Character>
+      <ItemSet commonness="1">
+        <Item identifier="idcard" equip="true" />
+        <Item identifier="captainscap2" equip="true" />
+        <Item identifier="captainsuniform2" equip="true" />
+      </ItemSet>
+    </npc>
+  </npcset>
+</npcsets>

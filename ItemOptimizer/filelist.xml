@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="ItemOptimizer" corepackage="false" modversion="1.0.30" gameversion="1.12.6.2" installtime="1776702138" expectedhash="6155541B1E5632DE2F65591DC5D2157B">
+  <Item file="%ModDir%/Items/proxy_items.xml" />
+</contentpackage>

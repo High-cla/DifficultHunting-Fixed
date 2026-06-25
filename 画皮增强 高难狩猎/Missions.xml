@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+   <MonsterMission name="深渊腐化" identifier="huntinggroundsnorewardHuskDHH" type="Monster" tags="DifficultHunting" description="来自画皮末日蠕虫的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="5000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Endwormhusk" min="1" max="1" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+   <MonsterMission name="深渊腐化" identifier="huntinggroundsnorewardHusk2DHH" type="Monster" tags="DifficultHunting" description="来自画皮噬海女妖的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="5000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Charybdishusk" min="1" max="1" />
+    <Reputation identifier="coalition" amount="10" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="深渊腐化" identifier="huntinggroundsnorewardHusk3DHH" type="Monster" tags="DifficultHunting" description="来自更多画皮末日蠕虫的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="8000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Endwormhusk" min="2" max="2" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="深渊腐化" identifier="huntinggroundsnorewardHusk4DHH" type="Monster" tags="DifficultHunting" description="来自更多画皮噬海女妖的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="8000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Charybdishusk" min="2" max="2" />
+    <Reputation identifier="coalition" amount="10" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="腐化狂宴" identifier="huntinggroundsnorewardHuskEND1DHH" type="Monster" tags="DifficultHunting" description="来自深渊三人组挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="10000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Endwormhusk" min="1" max="1" />
+    <monster character="Charybdishusk" min="2" max="2" />
+    <Reputation identifier="coalition" amount="10" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="终焉腐化" identifier="huntinggroundsnorewardHuskEND2DHH" type="Monster" tags="DifficultHunting" description="来自深渊六人组的挑战已经靠近，联盟许诺给予将其击退的勇士[reward]mk奖励。" commonness="50" reward="15000" sonarlabel="腐化深渊气息" maxsonarmarkerdistance="30000" successmessage="来自深渊的挑战已经完成" spawntype="Abyss" difficulty="4">
+    <monster character="Endwormhusk" min="3" max="3" />
+    <monster character="Charybdishusk" min="3" max="3" />
+    <Reputation identifier="coalition" amount="10" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="狩猎结束" text="你已击退深渊" />
+  </MonsterMission>
+  <MonsterMission name="腐化风暴" identifier="killhammerheadgoldhusk10DHH" type="Monster" tags="DifficultHunting" description="腐化风暴正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="5000" sonarlabel="腐化风暴" maxsonarmarkerdistance="10000" successmessage="腐化风暴已经停息" difficulty="4">
+    <monster character="Hammerheadgoldhusk" min="12" max="15" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="战胜风暴" text="腐化风暴已溃散，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="猎杀腐化摩螺克群" identifier="killmolochhusk10DHH" type="Monster" tags="DifficultHunting" description="一群攻击型极强的摩螺克正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" commonness="100" reward="5000" sonarlabel="腐化摩螺克群" maxsonarmarkerdistance="30000" successmessage="腐化摩螺克群已被清除" difficulty="4">
+    <monster character="Molochhusk" min="3" max="5" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="摩螺克群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="破伤风" identifier="killgiantspinelinghusk10DHH" type="Monster" tags="DifficultHunting" description="生锈的钉子可是很危险的，所以向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000" successmessage="生锈的铁钉已经拔除" sonarlabel="生锈铁钉">
+    <monster character="spineling_giant" min="5" max="7" />
+    <monster character="Spinelinghusk" min="8" max="10" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
+    <message header="任务完成" text="生锈的铁钉已经拔除" />
+  </MonsterMission>
+  <MonsterMission name="腐化迅猛龙阻击战" identifier="killmudraptorshusk10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的迅猛龙正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="5000" sonarlabel="腐化迅猛龙群" maxsonarmarkerdistance="10000" successmessage="腐化迅猛龙群已被清除">
+    <monster character="Mudraptorhusk" min="10" max="12" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="迅猛龙群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="腐化虎尾煞阻击战" identifier="killTigerthresherhusk10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的虎尾煞正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="4000" sonarlabel="腐化虎尾煞群" maxsonarmarkerdistance="10000" successmessage="腐化虎尾煞群已被清除">
+    <monster character="Tigerthresherhusk" min="15" max="20" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="虎尾煞群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="变异藻鬃爬行者阻击战" identifier="killhuskmutantcrawler10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的变异藻鬃爬行者正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="3000" sonarlabel="变异藻鬃爬行者" maxsonarmarkerdistance="10000" successmessage="变异藻鬃爬行者群已被清除">
+    <monster character="huskmutantcrawler" min="15" max="20" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="变异藻鬃爬行者群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="变异迅猛龙阻击战" identifier="killhuskmutantmudraptor10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的变异泥偶迅猛龙正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="5000" sonarlabel="变异泥偶迅猛龙" maxsonarmarkerdistance="10000" successmessage="变异泥偶迅猛龙群已被清除">
+    <monster character="huskmutantmudraptor" min="10" max="12" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="变异泥偶迅猛龙群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="变异虎尾鱼蛇阻击战" identifier="killhuskmutanttigerthresher10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的变异虎尾鱼蛇正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="4000" sonarlabel="变异虎尾鱼蛇" maxsonarmarkerdistance="10000" successmessage="变异虎尾鱼蛇群已被清除">
+    <monster character="huskmutanttigerthresher" min="15" max="20" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="变异虎尾鱼蛇群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <MonsterMission name="变异碎骨鲨阻击战" identifier="killhuskmutantbonethresher10DHH" type="Monster" tags="DifficultHunting" description="一群特别凶猛的变异碎骨鲨正袭击在[location1]和[location2]之间行驶的船只。已向歼灭这群怪物的人承诺给予[reward]mk奖励。" difficulty="4" commonness="100" reward="4000" sonarlabel="变异碎骨鲨" maxsonarmarkerdistance="10000" successmessage="变异碎骨鲨群已被清除">
+    <monster character="huskmutantbonethresher" min="10" max="12" />
+    <Reputation identifier="location" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="目标已击杀" text="变异碎骨鲨群已清除，返回站点领取奖励" />
+  </MonsterMission>
+  <OutpostNestMission name="活骸" identifier="abandonedoutpostHusk13" description="这里已经成为人间地狱，联盟已向摧毁此地的人承诺给予[reward]mk奖励。" tags="abandonedoutpost" type="OutpostDestroy" reward="10000" difficulty="4" commonness="100" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48" />
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="huskmutanthunter" min="6" max="9" />
+      <Character identifier="huskmutantarmored" min="3" max="6" />
+      <Character identifier="huskmutanthuman" min="3" max="6" />
+    </Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true" />
+    <message header="站点已清空" text="联盟已经接到你们的汇报，返回站点领取奖励" />
+  </OutpostNestMission>
+</Missions>

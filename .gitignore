@@ -5,3 +5,14 @@
 # OS files
 Thumbs.db
 .DS_Store
+
+# Build artifacts
+[Cc]ache/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+
+# Runtime data
+*.log
+*.tmp

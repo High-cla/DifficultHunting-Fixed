@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="新银色鱼雷" modversion="1.0.5" corepackage="False" gameversion="1.13.4.0">
+  <Submarine file="%ModDir%/./银色鱼雷ad.sub" />
+</contentpackage>
