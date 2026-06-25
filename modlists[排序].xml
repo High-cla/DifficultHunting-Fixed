@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mods name="1">
+  <Vanilla />
+  <Local name="LuaCsForBarotrauma" />
+  <Workshop name="Lua Linker" id="2852315967" />
+  <Workshop name="Vanilla_Components_Expanded" id="3606054332" />
+  <Workshop name="Affliction 描述优化-[Affliction Text Framework]" id="3704513246" />
+  <Workshop name="Barotrauma Performance Enhanced(ProjectEP)" id="3629459376" />
+  <Workshop name="Enhanced Loading" id="3623124595" />
+  <Workshop name="EntityDisableDistance" id="3617551399" />
+  <Workshop name="fast splatter decay" id="2723396291" />
+  <Workshop name="PerformanceEnhancement" id="3618710101" />
+  <Workshop name="Remove All" id="3043340865" />
+  <Workshop name="ShadowCulling" id="3621263586" />
+  <Workshop name="Anti-Kick NetFix" id="3647612070" />
+  <Workshop name="Bullet Collision Fix" id="3728965716" />
+  <Workshop name="Don't Crash" id="3462357985" />
+  <Workshop name="Dont Open Debug Console On Errors" id="2807566753" />
+  <Workshop name="Missing No i dont think so!" id="3716489248" />
+  <Workshop name="No Firendfire SIG" id="3479693949" />
+  <Workshop name="No Water Forces" id="2825277022" />
+  <Workshop name="中文优化-[Optimized for Simplified Chinese]" id="2965506707" />
+  <Workshop name="巡回杂物优化（Optimize Round Junk）" id="3401726940" />
+  <Workshop name="[移除空弹匣]Empty Magazine Cleaner" id="3690720502" />
+  <Workshop name="Simplified Wrecks" id="3316522587" />
+  <Workshop name="IO Storage" id="3646358075" />
+  <Workshop name="IO Storage - Cabinets[Capacity Increase + Vanilla Style]" id="3691830232" />
+  <Workshop name="Item Push Button" id="3679118756" />
+  <Local name="ItemOptimizer" />
+  <Workshop name="Smarter Bot AI - Patched2K" id="3716576421" />
+  <Workshop name="Smarter Bot AI 自用汉化" id="3570204422" />
+  <Workshop name="All Jobs See Reports" id="3169182250" />
+  <Workshop name="Better Orders" id="3708188095" />
+  <Workshop name="BetterFabricatorUI" id="2811300302" />
+  <Workshop name="Improved Quick Interactions" id="3702794488" />
+  <Workshop name="More Orders" id="3574799606" />
+  <Workshop name="MoreInfo" id="3648098935" />
+  <Workshop name="Sandbox Menu - Advanced Sandbox Tools for Barotrauma" id="3645729106" />
+  <Workshop name="Unconscious Healthbars" id="3189828754" />
+  <Workshop name="Auto Close Round Summary 自动关闭巡回总结" id="3438142316" />
+  <Local name="Advanced Autopilot" />
+  <Workshop name="AutoRepair" id="3723292868" />
+  <Workshop name="CrewStaysInSub" id="2971774993" />
+  <Workshop name="Despawn Button" id="3222992798" />
+  <Workshop name="Enhanced Immersion (lua only)" id="3123289876" />
+  <Workshop name="Find Sub" id="3143493883" />
+  <Workshop name="Multiplayer crew manager" id="2775613786" />
+  <Workshop name="Revive Bots - Endless Crew Respawns" id="3253027507" />
+  <Workshop name="RushDoor" id="3460359901" />
+  <Workshop name="Soundproof Walls 2.0" id="3153737715" />
+  <Workshop name="Stack Size 62x Lua" id="2916504564" />
+  <Workshop name="Auto Mechanic Grind  自动修门刷级" id="3718154210" />
+  <Workshop name="原版物品优化" id="2787296207" />
+  <Workshop name="魔改连射炮弹药" id="2975073753" />
+  <Workshop name="可删除的金属箱（Deletable Crate）" id="3234214637" />
+  <Workshop name="可链接弹药架" id="2923824641" />
+  <Workshop name="移除洋流" id="3044814810" />
+  <Workshop name="AddFunMemeDialog" id="3622324927" />
+  <Workshop name="Ammo Penetrate Corpse" id="3543916066" />
+  <Workshop name="Shipwrecks Extended" id="2095211492" />
+  <Workshop name="Super Talent" id="3302729306" />
+  <Workshop name="Unlimited Items" id="2681902523" />
+  <Workshop name="Unlimited Railgun" id="2688947465" />
+  <Workshop name="Overpowered sub -speedrun-" id="3142585368" />
+  <Workshop name="[EA-HI]木卫二萌化计划" id="2809175631" />
+  <Workshop name="[V+]木卫二神偷(Europa Thief)" id="3716146107" />
+  <Workshop name="[职业]神秘异色瞳大姐姐 2R4G 煙" id="3626586492" />
+  <Workshop name="百穿甲手持电磁炮" id="3527779055" />
+  <Workshop name="Handheld railgun - 手持轨道炮" id="3115433575" />
+  <Workshop name="多功能刀MultifunctionalKnife" id="2942166726" />
+  <Workshop name="天赋点经验(Talent Point EXP)" id="2652934155" />
+  <Workshop name="废弃站点复写" id="3263486833" />
+  <Workshop name="浊心斯卡蒂-[Skadi the Corrupting Heart]" id="3578142305" />
+  <Workshop name="物品增益持久化" id="3560768492" />
+  <Workshop name="超级基因拼接器" id="3563279931" />
+  <Workshop name="超越者基因" id="2952898338" />
+  <Workshop name="阿福的funny shit" id="3045169980" />
+  <Workshop name="万年风雪.加强版" id="2842882745" />
+  <Local name="新银色鱼雷" />
+  <Workshop name="Jucorx's 拟合线性控制纵向引擎 Fit linear control Vertical Engine" id="3521890878" />
+  <Local name="高难狩猎" />
+  <Local name="画皮增强 高难狩猎" />
+  <Workshop name="黑岩哨站（沉船）" id="2853862341" />
+  <Workshop name="Enhanced Husks FORKED" id="3508203496" />
+  <Workshop name="Enhanced Husks forked AI汉化补丁" id="3628809743" />
+</mods>
